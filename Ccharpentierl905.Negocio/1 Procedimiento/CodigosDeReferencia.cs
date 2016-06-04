@@ -8,17 +8,17 @@ namespace Ccharpentierl905.Negocio.ComoUnProcedimiento.CodigosDeReferencia
         public static string GenerarCodigoDeReferencia (DateTime fecha, string cliente, 
             string sistema, string consecutivo)
         {
-            int dia = fecha.Day;            
-            int mes = fecha.Month;            
-            int año = fecha.Year;
-
             //Convertir fechas en String, y darles relleno con 0 a 2 y 4 espacios
+            int dia = fecha.Day;            
             string diaEnTexto = dia.ToString();
-            string mesEnTexto = mes.ToString();
-            string añoEnTexto = año.ToString();
-
             string diaEnTextoRellenoConCero = diaEnTexto.PadLeft(2, '0');
+
+            int mes = fecha.Month;            
+            string mesEnTexto = mes.ToString();
             string mesEnTextoRellenoConCero = mesEnTexto.PadLeft(2, '0');
+
+            int año = fecha.Year;
+            string añoEnTexto = año.ToString();
             string añoEnTextoRellenoConCero = añoEnTexto.PadLeft(4, '0');
 
             string fechaCompletaComoTexto = añoEnTextoRellenoConCero + mesEnTextoRellenoConCero + diaEnTextoRellenoConCero;
