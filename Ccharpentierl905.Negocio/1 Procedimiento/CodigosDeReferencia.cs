@@ -14,12 +14,11 @@ namespace Ccharpentierl905.Negocio.ComoUnProcedimiento.CodigosDeReferencia
 
             //Convertir fechas en String, y darles relleno con 0 a 2 y 4 espacios
             string diaEnTexto = dia.ToString();
-            string diaEnTextoRellenoConCero = diaEnTexto.PadLeft(2, '0');
-
             string mesEnTexto = mes.ToString();
-            string mesEnTextoRellenoConCero = mesEnTexto.PadLeft(2, '0');
-
             string añoEnTexto = año.ToString();
+
+            string diaEnTextoRellenoConCero = diaEnTexto.PadLeft(2, '0');
+            string mesEnTextoRellenoConCero = mesEnTexto.PadLeft(2, '0');
             string añoEnTextoRellenoConCero = añoEnTexto.PadLeft(4, '0');
 
             string fechaCompletaComoTexto = añoEnTextoRellenoConCero + mesEnTextoRellenoConCero + diaEnTextoRellenoConCero;
@@ -30,11 +29,10 @@ namespace Ccharpentierl905.Negocio.ComoUnProcedimiento.CodigosDeReferencia
             consecutivo = consecutivo.PadLeft(12, '0');
 
             string codigoDeReferenciaSinVerificador = fechaCompletaComoTexto + cliente + sistema + consecutivo;
+
             int verificador = CalculoDeDigitoVerificador.CalculeElDigitoVerificador(codigoDeReferenciaSinVerificador);
 
-            string codigoDeReferencia = codigoDeReferenciaSinVerificador + verificador;
-
-            return codigoDeReferencia;
+            return codigoDeReferenciaSinVerificador + verificador;
         }
     }
 }
