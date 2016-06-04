@@ -8,6 +8,15 @@ namespace Ccharpentierl905.Negocio.ConFunciones.CodigosDeReferencia
         public static string GenerarCodigoDeReferencia(DateTime fecha, string cliente,
             string sistema, string consecutivo)
         {
+            string codigoDeReferenciaSinVerificador = ObtenerCodigoDeReferenciaSinVerificador(fecha, cliente, sistema, consecutivo);
+
+            int verificador = CalculoDeDigitoVerificador.CalculeElDigitoVerificador(codigoDeReferenciaSinVerificador);
+
+            return ObtenerCodigoDeReferencia(codigoDeReferenciaSinVerificador, verificador);
+        }
+
+        private static string ObtenerCodigoDeReferenciaSinVerificador(DateTime fecha, string cliente, string sistema, string consecutivo)
+        {
             //Convertir fechas en String, y darles relleno con 0 a 2 y 4 espacios
             int dia = fecha.Day;
             string diaEnTexto = dia.ToString();
@@ -30,8 +39,11 @@ namespace Ccharpentierl905.Negocio.ConFunciones.CodigosDeReferencia
 
             string codigoDeReferenciaSinVerificador = fechaCompletaComoTexto + cliente + sistema + consecutivo;
 
-            int verificador = CalculoDeDigitoVerificador.CalculeElDigitoVerificador(codigoDeReferenciaSinVerificador);
+            return codigoDeReferenciaSinVerificador;
+        }
 
+        private static string ObtenerCodigoDeReferencia(string codigoDeReferenciaSinVerificador, int verificador)
+        {
             return codigoDeReferenciaSinVerificador + verificador;
         }
     }
