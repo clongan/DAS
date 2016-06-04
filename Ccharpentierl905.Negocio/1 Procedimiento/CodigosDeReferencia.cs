@@ -29,10 +29,10 @@ namespace Ccharpentierl905.Negocio.ComoUnProcedimiento.CodigosDeReferencia
             sistema = sistema.PadLeft(2, '0');
             consecutivo = consecutivo.PadLeft(12, '0');
 
-            string codDeRefSinVerificador = fechaCompletaComoTexto + cliente + sistema + consecutivo;
-            int verificador = CalculoDeDigitoVerificador.CalculeElDigitoVerificador(codDeRefSinVerificador);
+            string codigoDeReferenciaSinVerificador = fechaCompletaComoTexto + cliente + sistema + consecutivo;
+            int verificador = CalculoDeDigitoVerificador.CalculeElDigitoVerificador(codigoDeReferenciaSinVerificador);
 
-            string codigoDeReferencia = codDeRefSinVerificador + verificador;
+            string codigoDeReferencia = codigoDeReferenciaSinVerificador + verificador;
 
             return codigoDeReferencia;
         }
