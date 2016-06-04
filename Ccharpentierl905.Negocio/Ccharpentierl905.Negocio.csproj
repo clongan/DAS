@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Con Funciones\CalculoDeDigitoVerificador.cs" />
+    <Compile Include="Con Funciones\CodigosDeReferencia.cs" />
     <Compile Include="1 Procedimiento\CalculoDeDigitoVerificador.cs" />
     <Compile Include="1 Procedimiento\CodigosDeReferencia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

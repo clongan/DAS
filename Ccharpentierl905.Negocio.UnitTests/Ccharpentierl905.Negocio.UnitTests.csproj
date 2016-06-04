@@ -52,6 +52,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Con Funciones\CodigosDeReferencia\CodigosDeReferencia_Tests.cs" />
     <Compile Include="1 Procedimiento\CodigosDeReferencia\CodigosDeReferencia_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
