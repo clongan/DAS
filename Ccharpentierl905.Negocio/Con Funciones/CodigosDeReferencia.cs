@@ -37,9 +37,7 @@ namespace Ccharpentierl905.Negocio.ConFunciones.CodigosDeReferencia
             sistema = sistema.PadLeft(2, '0');
             consecutivo = consecutivo.PadLeft(12, '0');
 
-            string codigoDeReferenciaSinVerificador = fechaCompletaComoTexto + cliente + sistema + consecutivo;
-
-            return codigoDeReferenciaSinVerificador;
+            return fechaCompletaComoTexto + cliente + sistema + consecutivo;
         }
 
         private static string ObtenerCodigoDeReferencia(string codigoDeReferenciaSinVerificador, int verificador)
