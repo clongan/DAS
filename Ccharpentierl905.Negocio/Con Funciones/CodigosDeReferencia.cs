@@ -18,6 +18,10 @@ namespace Ccharpentierl905.Negocio.ConFunciones.CodigosDeReferencia
         private static string ObtenerCodigoDeReferenciaSinVerificador(DateTime fecha, string cliente, string sistema, string consecutivo)
         {
             //Convertir fechas en String, y darles relleno con 0 a 2 y 4 espacios
+
+
+            //PRUEBA DE PULL DE GITHUB 06/08/2016 EN COMPU CASA
+
             int dia = fecha.Day;
             string diaEnTexto = dia.ToString();
             string diaEnTextoRellenoConCero = diaEnTexto.PadLeft(2, '0');
