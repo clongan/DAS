@@ -16,7 +16,16 @@ namespace Ccharpentierl905.Negocio.ConFunciones.CodigosDeReferencia
 
         private static string ObtenerCodigoDeReferenciaSinVerificador(DateTime fecha, string cliente, string sistema, string consecutivo)
         {
-            //Convertir fechas en String, y darles relleno con 0 a 2 y 4 espacios
+            string fechaCompletaComoTexto = FormatearFechaComoTexto(fecha);
+            string clienteFormateado = RellenarClienteConCeros(cliente);
+            string sistemaFormateado = RellenarSistemaConCeros(sistema);
+            string consecutivoFormateado = RellenarConsecutivoConCeros(consecutivo);
+
+            return FormateeCodigodeReferenciaSinVerificador(fechaCompletaComoTexto, clienteFormateado, sistemaFormateado, consecutivoFormateado);
+        }
+
+        private static string FormatearFechaComoTexto(DateTime fecha)
+        {
             int dia = fecha.Day;
             string diaEnTexto = dia.ToString();
             string diaEnTextoRellenoConCero = diaEnTexto.PadLeft(2, '0');
@@ -27,16 +36,28 @@ namespace Ccharpentierl905.Negocio.ConFunciones.CodigosDeReferencia
 
             int año = fecha.Year;
             string añoEnTexto = año.ToString();
-            string añoEnTextoRellenoConCero = añoEnTexto.PadLeft(4, '0');
 
-            string fechaCompletaComoTexto = añoEnTextoRellenoConCero + mesEnTextoRellenoConCero + diaEnTextoRellenoConCero;
+            return ObtengaFechaComoTexto(diaEnTextoRellenoConCero, mesEnTextoRellenoConCero, añoEnTexto);
+        }
 
-            //Dar a cliente/sistema/consecutivo relleno de 0 a 3/2/12 espacios
-            string clienteFormateado = cliente.PadLeft(3, '0');
-            string sistemaFormateado = sistema.PadLeft(2, '0');
-            string consecutivoFormateado = consecutivo.PadLeft(12, '0');
+        private static string ObtengaFechaComoTexto(string diaEnTextoRellenoConCero, string mesEnTextoRellenoConCero, string añoEnTexto)
+        {
+            return añoEnTexto + mesEnTextoRellenoConCero + diaEnTextoRellenoConCero;
+        }
 
-            return FormateeCodigodeReferenciaSinVerificador(fechaCompletaComoTexto, clienteFormateado, sistemaFormateado, consecutivoFormateado);
+        private static string RellenarClienteConCeros(string cliente)
+        {
+            return cliente.PadLeft(3, '0');
+        }
+
+        private static string RellenarSistemaConCeros(string sistema)
+        {
+            return sistema.PadLeft(2, '0');
+        }
+
+        private static string RellenarConsecutivoConCeros(string consecutivo)
+        {
+            return consecutivo.PadLeft(12, '0');
         }
 
         private static string FormateeCodigodeReferenciaSinVerificador(string fechaCompletaComoTexto, string clienteFormateado, string sistemaFormateado, string consecutivoFormateado)
