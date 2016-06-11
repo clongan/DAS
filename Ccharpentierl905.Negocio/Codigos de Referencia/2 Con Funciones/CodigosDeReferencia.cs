@@ -9,7 +9,6 @@ namespace Ccharpentierl905.Negocio.ConFunciones.CodigosDeReferencia
             string sistema, string consecutivo)
         {
             string codigoDeReferenciaSinVerificador = ObtenerCodigoDeReferenciaSinVerificador(fecha, cliente, sistema, consecutivo);
-
             int verificador = CalculoDeDigitoVerificador.CalculeElDigitoVerificador(codigoDeReferenciaSinVerificador);
 
             return ObtenerCodigoDeReferencia(codigoDeReferenciaSinVerificador, verificador);
@@ -18,10 +17,6 @@ namespace Ccharpentierl905.Negocio.ConFunciones.CodigosDeReferencia
         private static string ObtenerCodigoDeReferenciaSinVerificador(DateTime fecha, string cliente, string sistema, string consecutivo)
         {
             //Convertir fechas en String, y darles relleno con 0 a 2 y 4 espacios
-
-
-            //PRUEBA DE PULL DE GITHUB 06/08/2016 EN COMPU CASA
-
             int dia = fecha.Day;
             string diaEnTexto = dia.ToString();
             string diaEnTextoRellenoConCero = diaEnTexto.PadLeft(2, '0');
@@ -37,11 +32,16 @@ namespace Ccharpentierl905.Negocio.ConFunciones.CodigosDeReferencia
             string fechaCompletaComoTexto = añoEnTextoRellenoConCero + mesEnTextoRellenoConCero + diaEnTextoRellenoConCero;
 
             //Dar a cliente/sistema/consecutivo relleno de 0 a 3/2/12 espacios
-            cliente = cliente.PadLeft(3, '0');
-            sistema = sistema.PadLeft(2, '0');
-            consecutivo = consecutivo.PadLeft(12, '0');
+            string clienteFormateado = cliente.PadLeft(3, '0');
+            string sistemaFormateado = sistema.PadLeft(2, '0');
+            string consecutivoFormateado = consecutivo.PadLeft(12, '0');
 
-            return fechaCompletaComoTexto + cliente + sistema + consecutivo;
+            return FormateeCodigodeReferenciaSinVerificador(fechaCompletaComoTexto, clienteFormateado, sistemaFormateado, consecutivoFormateado);
+        }
+
+        private static string FormateeCodigodeReferenciaSinVerificador(string fechaCompletaComoTexto, string clienteFormateado, string sistemaFormateado, string consecutivoFormateado)
+        {
+            return fechaCompletaComoTexto + clienteFormateado + sistemaFormateado + consecutivoFormateado;
         }
 
         private static string ObtenerCodigoDeReferencia(string codigoDeReferenciaSinVerificador, int verificador)

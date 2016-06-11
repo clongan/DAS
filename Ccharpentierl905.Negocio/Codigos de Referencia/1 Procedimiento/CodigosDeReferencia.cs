@@ -12,15 +12,12 @@ namespace Ccharpentierl905.Negocio.ComoUnProcedimiento.CodigosDeReferencia
             int dia = fecha.Day;            
             string diaEnTexto = dia.ToString();
             string diaEnTextoRellenoConCero = diaEnTexto.PadLeft(2, '0');
-
             int mes = fecha.Month;            
             string mesEnTexto = mes.ToString();
             string mesEnTextoRellenoConCero = mesEnTexto.PadLeft(2, '0');
-
             int año = fecha.Year;
             string añoEnTexto = año.ToString();
             string añoEnTextoRellenoConCero = añoEnTexto.PadLeft(4, '0');
-
             string fechaCompletaComoTexto = añoEnTextoRellenoConCero + mesEnTextoRellenoConCero + diaEnTextoRellenoConCero;
 
             //Dar a cliente/sistema/consecutivo relleno de 0 a 3/2/12 espacios
