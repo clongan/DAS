@@ -45,8 +45,11 @@
     <Compile Include="Codigos de Referencia\1 Procedimiento\CalculoDeDigitoVerificador.cs" />
     <Compile Include="Codigos de Referencia\1 Procedimiento\CodigosDeReferencia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rendimiento Por Descuento\1 Procedimiento\RendimientoPorDescuento.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Rendimiento Por Descuento\2 Con Funciones\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

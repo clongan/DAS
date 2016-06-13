@@ -2,7 +2,7 @@
 using Ccharpentierl905.Negocio.ComoUnProcedimiento.CodigosDeReferencia;
 using System;
 
-namespace Ccharpentierl905.Negocio.UnitTests.ComoUnProcedimiento_TESTS
+namespace Ccharpentierl905.Negocio.UnitTests.ComoUnProcedimiento.CodigosDeReferencia_TESTS
 {
     [TestClass]
     public class CodigosDeReferencia_Tests
