@@ -4,28 +4,24 @@ namespace Ccharpentierl905.Negocio.ComoUnProcedimiento.RendimientoPorDescuento
 {
     public class RendimientoPorDescuento
     {
-        public static decimal DeterminarRendimientoPorDescuento(decimal valorFacial, decimal valorTransadoNeto, decimal tasaDeImpuesto,
+        public static double DeterminarRendimientoPorDescuento(double valorFacial, double valorTransadoNeto, double tasaDeImpuesto,
             DateTime fechaDeVencimiento, DateTime fechaActual, Boolean tratamientoFiscal)
         {
-            decimal rendimientoPorDescuento = 0;
-            decimal valorTransadoBruto = 0;
+            double rendimientoPorDescuento = 0;
 
             if (tratamientoFiscal == true)
             {
-                decimal diasAlVencimiento = Convert.ToDecimal((fechaDeVencimiento - fechaActual).TotalDays);
-                decimal tasaNeta = ((valorFacial - valorTransadoNeto) / (valorTransadoNeto * (diasAlVencimiento / 365))) * 100;
-                decimal tasaBruta = tasaNeta / (1 - tasaDeImpuesto);
-                valorTransadoBruto = valorFacial / (1 + ((tasaBruta / 100) * (diasAlVencimiento / 365)));
+                double diasAlVencimiento = (fechaDeVencimiento - fechaActual).TotalDays;
+                double tasaNeta = ((valorFacial - valorTransadoNeto) / (valorTransadoNeto * (diasAlVencimiento / 365))) * 100;
+                double tasaBruta = tasaNeta / (1 - tasaDeImpuesto);
+                double valorTransadoBruto = valorFacial / (1 + ((tasaBruta / 100) * (diasAlVencimiento / 365)));
                 rendimientoPorDescuento = valorFacial - valorTransadoBruto;
-
             }
             else
             {
-                valorTransadoBruto = valorTransadoNeto;
-                rendimientoPorDescuento = valorFacial - valorTransadoBruto;
+                rendimientoPorDescuento = valorFacial - valorTransadoNeto;
             }
-
-            return decimal.Round(rendimientoPorDescuento, 4);
+            return Math.Round(rendimientoPorDescuento,4);
         }
     }
 }

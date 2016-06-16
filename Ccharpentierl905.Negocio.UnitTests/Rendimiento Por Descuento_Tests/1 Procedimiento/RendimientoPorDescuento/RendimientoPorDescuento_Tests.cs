@@ -7,11 +7,11 @@ namespace Ccharpentierl905.Negocio.UnitTests.ComoUnProcedimiento.RendimientoPorD
     [TestClass]
     public class RendimientoPorDescuento_Tests
     {
-        private decimal elResultadoObtenido;
-        private decimal elResultadoEsperado;
-        private decimal valorFacial;
-        private decimal valorTransadoNeto;
-        private decimal tasaDeImpuesto;
+        private double elResultadoObtenido;
+        private double elResultadoEsperado;
+        private double valorFacial;
+        private double valorTransadoNeto;
+        private double tasaDeImpuesto;
         private DateTime fechaDeVencimiento;
         private DateTime fechaActual;
         private Boolean tratamientoFiscal;
@@ -20,11 +20,11 @@ namespace Ccharpentierl905.Negocio.UnitTests.ComoUnProcedimiento.RendimientoPorD
         [TestMethod]
         public void GeneraRendimientoPorDescuento_TieneTratamientoFiscal_RedondeoHaciaAbajo()
         {
-            elResultadoEsperado = Convert.ToDecimal(21621.6216);
+            elResultadoEsperado = 21621.6216;
 
             valorFacial = 320000;
-            valorTransadoNeto = Convert.ToDecimal(300000);
-            tasaDeImpuesto = Convert.ToDecimal(0.08);
+            valorTransadoNeto = 300000;
+            tasaDeImpuesto = 0.08;
             fechaDeVencimiento = new DateTime(2016, 10, 10);
             fechaActual = new DateTime(2016, 3, 3);
             tratamientoFiscal = true;
@@ -38,11 +38,11 @@ namespace Ccharpentierl905.Negocio.UnitTests.ComoUnProcedimiento.RendimientoPorD
         [TestMethod]
         public void GeneraRendimientoPorDescuento_TieneTratamientoFiscal_RedondeoHaciaArriba()
         {
-            elResultadoEsperado = Convert.ToDecimal(22159.3592);
+            elResultadoEsperado = 22159.3592;
 
             valorFacial = 320500;
-            valorTransadoNeto = Convert.ToDecimal(300000);
-            tasaDeImpuesto = Convert.ToDecimal(0.08);
+            valorTransadoNeto = 300000;
+            tasaDeImpuesto = 0.08;
             fechaDeVencimiento = new DateTime(2016, 10, 10);
             fechaActual = new DateTime(2016, 3, 3);
             tratamientoFiscal = true;
@@ -56,11 +56,11 @@ namespace Ccharpentierl905.Negocio.UnitTests.ComoUnProcedimiento.RendimientoPorD
         [TestMethod]
         public void GeneraRendimientoPorDescuento_NoTieneTratamientoFiscal_SinRedondeo()
         {
-            elResultadoEsperado = Convert.ToDecimal(19999.9999);
+            elResultadoEsperado = 19999.9999;
 
             valorFacial = 320000;
-            valorTransadoNeto = Convert.ToDecimal(300000.0001);
-            tasaDeImpuesto = Convert.ToDecimal(0.08);
+            valorTransadoNeto = 300000.0001;
+            tasaDeImpuesto = 0.08;
             fechaDeVencimiento = new DateTime(2016, 10, 10);
             fechaActual = new DateTime(2016, 3, 3);
             tratamientoFiscal = false;

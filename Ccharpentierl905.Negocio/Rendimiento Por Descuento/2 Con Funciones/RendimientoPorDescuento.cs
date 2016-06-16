@@ -4,19 +4,18 @@ namespace Ccharpentierl905.Negocio.ConFunciones.RendimientoPorDescuento
 {
     public class RendimientoPorDescuento
     {
-        public static decimal DeterminarRendimientoPorDescuento(decimal valorFacial, decimal valorTransadoNeto, decimal tasaDeImpuesto,
+        public static double DeterminarRendimientoPorDescuento(double valorFacial, double valorTransadoNeto, double tasaDeImpuesto,
             DateTime fechaDeVencimiento, DateTime fechaActual, Boolean tratamientoFiscal)
         {
-            decimal rendimientoPorDescuento = ObtenerRendimientoPorDescuento(valorFacial, valorTransadoNeto, tasaDeImpuesto, fechaDeVencimiento, fechaActual, tratamientoFiscal);
-
-            return RedondearRendimientoPorDescuento(rendimientoPorDescuento);
+            double rendimientoPorDescuento = ObtenerRendimientoPorDescuento(valorFacial, valorTransadoNeto, tasaDeImpuesto, fechaDeVencimiento, fechaActual, tratamientoFiscal);
+            return RedondearConCuatroDecimales(rendimientoPorDescuento);
         }
 
-        private static decimal ObtenerRendimientoPorDescuento(decimal valorFacial, decimal valorTransadoNeto, decimal tasaDeImpuesto, DateTime fechaDeVencimiento, DateTime fechaActual, bool tratamientoFiscal)
+        private static double ObtenerRendimientoPorDescuento(double valorFacial, double valorTransadoNeto, double tasaDeImpuesto, DateTime fechaDeVencimiento, DateTime fechaActual, bool tratamientoFiscal)
         {
-            decimal rendimientoPorDescuento;
+            double rendimientoPorDescuento = 0;
 
-            if (TratamientoFiscalEsVerdadero(tratamientoFiscal))
+            if (tratamientoFiscal == true)
             {
                 rendimientoPorDescuento = EstablecerRendimientoPorDescuentoSiTratamientoFiscalEsVerdadero(valorFacial, valorTransadoNeto, tasaDeImpuesto, fechaDeVencimiento, fechaActual);
             }
@@ -24,67 +23,63 @@ namespace Ccharpentierl905.Negocio.ConFunciones.RendimientoPorDescuento
             {
                 rendimientoPorDescuento = EstablecerRendimientoPorDescuentoSiTratamientoFiscalEsFalso(valorFacial, valorTransadoNeto);
             }
-
+      
             return rendimientoPorDescuento;
         }
 
-        private static bool TratamientoFiscalEsVerdadero(bool tratamientoFiscal)
+        private static double EstablecerRendimientoPorDescuentoSiTratamientoFiscalEsVerdadero(double valorFacial, double valorTransadoNeto, double tasaDeImpuesto, DateTime fechaDeVencimiento, DateTime fechaActual)
         {
-            return tratamientoFiscal == true;
+            double valorTransadoBruto = ObtenerValorTransadoBruto(valorFacial, valorTransadoNeto, tasaDeImpuesto, fechaDeVencimiento, fechaActual);
+            return valorFacial - valorTransadoBruto;
         }
 
-        private static decimal EstablecerRendimientoPorDescuentoSiTratamientoFiscalEsVerdadero(decimal valorFacial, decimal valorTransadoNeto, decimal tasaDeImpuesto, DateTime fechaDeVencimiento, DateTime fechaActual)
+        private static double ObtenerValorTransadoBruto(double valorFacial, double valorTransadoNeto, double tasaDeImpuesto, DateTime fechaDeVencimiento, DateTime fechaActual)
         {
-            decimal diasAlVencimiento = DeterminarDiasAlVencimiento(fechaDeVencimiento, fechaActual);
-            decimal tasaBruta = DeterminarTasaBruta(valorFacial, valorTransadoNeto, tasaDeImpuesto, diasAlVencimiento);
-            return RetornarRendimientoPorDescuentoSiTratamientoFiscalEsVerdadero(valorFacial, diasAlVencimiento, tasaBruta);
+            double diasAlVencimiento = ObtenerDiasAlVencimiento(fechaDeVencimiento, fechaActual);
+            double tasaBruta = ObtenerTasaBruta(valorFacial, valorTransadoNeto, tasaDeImpuesto, diasAlVencimiento);
+            return DeterminarValorTransadoBruto(valorFacial, diasAlVencimiento, tasaBruta);
         }
 
-        private static decimal DeterminarDiasAlVencimiento(DateTime fechaDeVencimiento, DateTime fechaActual)
+        private static double ObtenerDiasAlVencimiento(DateTime fechaDeVencimiento, DateTime fechaActual)
         {
-            double diasAlVencimiento = EstablecerDiasAlVencimiento(fechaDeVencimiento, fechaActual);
-            return ConvertirDiasAlVencimientoADecimal(diasAlVencimiento);
+            TimeSpan diasAlVencimiento = DeterminarDiasAlVencimiento(fechaDeVencimiento, fechaActual);
+            return ConvertirDiasAlVencimientoAEntero(diasAlVencimiento);
         }
 
-        private static double EstablecerDiasAlVencimiento(DateTime fechaDeVencimiento, DateTime fechaActual)
+        private static TimeSpan DeterminarDiasAlVencimiento(DateTime fechaDeVencimiento, DateTime fechaActual)
         {
-            return (fechaDeVencimiento - fechaActual).TotalDays;
+            return fechaDeVencimiento - fechaActual;
         }
 
-        private static decimal ConvertirDiasAlVencimientoADecimal(double diasAlVencimiento)
+        private static double ConvertirDiasAlVencimientoAEntero(TimeSpan diasAlVencimiento)
         {
-            return Convert.ToDecimal(diasAlVencimiento);
+            return diasAlVencimiento.TotalDays;
         }
 
-        private static decimal DeterminarTasaBruta(decimal valorFacial, decimal valorTransadoNeto, decimal tasaDeImpuesto, decimal diasAlVencimiento)
+        private static double DeterminarValorTransadoBruto(double valorFacial, double diasAlVencimiento, double tasaBruta)
         {
-            decimal tasaNeta = AsignarTasaNeta(valorFacial, valorTransadoNeto, diasAlVencimiento);
-            return ObtenerTasaBruta(tasaDeImpuesto, tasaNeta);
+            return valorFacial / (1 + ((tasaBruta / 100) * (diasAlVencimiento / 365)));
         }
 
-        private static decimal AsignarTasaNeta(decimal valorFacial, decimal valorTransadoNeto, decimal diasAlVencimiento)
+        private static double ObtenerTasaBruta(double valorFacial, double valorTransadoNeto, double tasaDeImpuesto, double diasAlVencimiento)
+        {
+            double tasaNeta = ObtenerTasaNeta(valorFacial, valorTransadoNeto, diasAlVencimiento);
+            return tasaNeta / (1 - tasaDeImpuesto);
+        }
+
+        private static double ObtenerTasaNeta(double valorFacial, double valorTransadoNeto, double diasAlVencimiento)
         {
             return ((valorFacial - valorTransadoNeto) / (valorTransadoNeto * (diasAlVencimiento / 365))) * 100;
         }
 
-        private static decimal ObtenerTasaBruta(decimal tasaDeImpuesto, decimal tasaNeta)
-        {
-            return tasaNeta / (1 - tasaDeImpuesto);
-        }
-
-        private static decimal RetornarRendimientoPorDescuentoSiTratamientoFiscalEsVerdadero(decimal valorFacial, decimal diasAlVencimiento, decimal tasaBruta)
-        {
-            return valorFacial - (valorFacial / (1 + ((tasaBruta / 100) * (diasAlVencimiento / 365))));
-        }
-
-        private static decimal EstablecerRendimientoPorDescuentoSiTratamientoFiscalEsFalso(decimal valorFacial, decimal valorTransadoNeto)
+        private static double EstablecerRendimientoPorDescuentoSiTratamientoFiscalEsFalso(double valorFacial, double valorTransadoNeto)
         {
             return valorFacial - valorTransadoNeto;
         }
 
-        private static decimal RedondearRendimientoPorDescuento(decimal rendimientoPorDescuento)
+        private static double RedondearConCuatroDecimales(double rendimientoPorDescuento)
         {
-            return decimal.Round(rendimientoPorDescuento, 4);
+            return Math.Round(rendimientoPorDescuento, 4);
         }
     }
 }
