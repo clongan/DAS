@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Ccharpentierl905.Negocio.ComoUnProcedimiento.RendimientoPorDescuento
+namespace Ccharpentierl905.Negocio.ConFunciones.RendimientoPorDescuento
 {
     public class RendimientoPorDescuento
     {
