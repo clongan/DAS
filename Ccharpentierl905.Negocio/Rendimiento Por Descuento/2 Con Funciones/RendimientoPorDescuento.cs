@@ -11,11 +11,11 @@ namespace Ccharpentierl905.Negocio.ConFunciones.RendimientoPorDescuento
             return RedondearConCuatroDecimales(rendimientoPorDescuento);
         }
 
-        private static double ObtenerRendimientoPorDescuento(double valorFacial, double valorTransadoNeto, double tasaDeImpuesto, DateTime fechaDeVencimiento, DateTime fechaActual, bool tratamientoFiscal)
+        private static double ObtenerRendimientoPorDescuento(double valorFacial, double valorTransadoNeto, double tasaDeImpuesto, DateTime fechaDeVencimiento, DateTime fechaActual, bool tieneTratamientoFiscal)
         {
             double rendimientoPorDescuento = 0;
 
-            if (tratamientoFiscal == true)
+            if (tieneTratamientoFiscal)
             {
                 rendimientoPorDescuento = EstablecerRendimientoPorDescuentoSiTratamientoFiscalEsVerdadero(valorFacial, valorTransadoNeto, tasaDeImpuesto, fechaDeVencimiento, fechaActual);
             }
@@ -64,6 +64,11 @@ namespace Ccharpentierl905.Negocio.ConFunciones.RendimientoPorDescuento
         private static double ObtenerTasaBruta(double valorFacial, double valorTransadoNeto, double tasaDeImpuesto, double diasAlVencimiento)
         {
             double tasaNeta = ObtenerTasaNeta(valorFacial, valorTransadoNeto, diasAlVencimiento);
+            return CalcularTasaBruta(tasaDeImpuesto, tasaNeta);
+        }
+
+        private static double CalcularTasaBruta(double tasaDeImpuesto, double tasaNeta)
+        {
             return tasaNeta / (1 - tasaDeImpuesto);
         }
 

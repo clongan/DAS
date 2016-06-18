@@ -5,11 +5,11 @@ namespace Ccharpentierl905.Negocio.ComoUnProcedimiento.RendimientoPorDescuento
     public class RendimientoPorDescuento
     {
         public static double DeterminarRendimientoPorDescuento(double valorFacial, double valorTransadoNeto, double tasaDeImpuesto,
-            DateTime fechaDeVencimiento, DateTime fechaActual, Boolean tratamientoFiscal)
+            DateTime fechaDeVencimiento, DateTime fechaActual, Boolean tieneTratamientoFiscal)
         {
             double rendimientoPorDescuento = 0;
 
-            if (tratamientoFiscal == true)
+            if (tieneTratamientoFiscal)
             {
                 double diasAlVencimiento = (fechaDeVencimiento - fechaActual).TotalDays;
                 double tasaNeta = ((valorFacial - valorTransadoNeto) / (valorTransadoNeto * (diasAlVencimiento / 365))) * 100;
