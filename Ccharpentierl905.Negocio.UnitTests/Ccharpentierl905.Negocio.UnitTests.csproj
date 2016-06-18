@@ -52,10 +52,10 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Rendimiento Por Descuento_Tests\2 Con Funciones\RendimientoPorDescuento\RendimientoPorDescuento_Tests.cs" />
-    <Compile Include="Rendimiento Por Descuento_Tests\1 Procedimiento\RendimientoPorDescuento\RendimientoPorDescuento_Tests.cs" />
-    <Compile Include="Codigos de Referencia_Tests\2 Con Funciones\CodigosDeReferencia\CodigosDeReferencia_Tests.cs" />
-    <Compile Include="Codigos de Referencia_Tests\1 Procedimiento\CodigosDeReferencia\CodigosDeReferencia_Tests.cs" />
+    <Compile Include="Rendimiento Por Descuento_Tests\2 Con Funciones\RendimientoPorDescuento_Tests.cs" />
+    <Compile Include="Rendimiento Por Descuento_Tests\1 Procedimiento\RendimientoPorDescuento_Tests.cs" />
+    <Compile Include="Codigos de Referencia_Tests\2 Con Funciones\CodigosDeReferencia_Tests.cs" />
+    <Compile Include="Codigos de Referencia_Tests\1 Procedimiento\CodigosDeReferencia_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

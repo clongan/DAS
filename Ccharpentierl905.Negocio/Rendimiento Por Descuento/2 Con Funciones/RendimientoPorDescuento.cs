@@ -7,56 +7,60 @@ namespace Ccharpentierl905.Negocio.ConFunciones.RendimientoPorDescuento
         public static double DeterminarRendimientoPorDescuento(double valorFacial, double valorTransadoNeto, double tasaDeImpuesto,
             DateTime fechaDeVencimiento, DateTime fechaActual, Boolean tratamientoFiscal)
         {
-            double rendimientoPorDescuento = ObtenerRendimientoPorDescuento(valorFacial, valorTransadoNeto, tasaDeImpuesto, fechaDeVencimiento, fechaActual, tratamientoFiscal);
+            double rendimientoPorDescuento = ObtenerRendimientoPorDescuentoSinRedondeo(valorFacial, valorTransadoNeto, tasaDeImpuesto, fechaDeVencimiento, fechaActual, tratamientoFiscal);
             return RedondearConCuatroDecimales(rendimientoPorDescuento);
         }
 
-        private static double ObtenerRendimientoPorDescuento(double valorFacial, double valorTransadoNeto, double tasaDeImpuesto, DateTime fechaDeVencimiento, DateTime fechaActual, bool tieneTratamientoFiscal)
+        private static double ObtenerRendimientoPorDescuentoSinRedondeo(double valorFacial, double valorTransadoNeto, double tasaDeImpuesto, DateTime fechaDeVencimiento, DateTime fechaActual, bool tieneTratamientoFiscal)
         {
-            double rendimientoPorDescuento = 0;
-
             if (tieneTratamientoFiscal)
-            {
-                rendimientoPorDescuento = EstablecerRendimientoPorDescuentoSiTratamientoFiscalEsVerdadero(valorFacial, valorTransadoNeto, tasaDeImpuesto, fechaDeVencimiento, fechaActual);
-            }
+                return AsignarRendimientoPorDescuentoSiTieneTratamientoFiscal(valorFacial, valorTransadoNeto, tasaDeImpuesto, fechaDeVencimiento, fechaActual);
             else
-            {
-                rendimientoPorDescuento = EstablecerRendimientoPorDescuentoSiTratamientoFiscalEsFalso(valorFacial, valorTransadoNeto);
-            }
-      
-            return rendimientoPorDescuento;
+                return AsignarRendimientoPorDescuentoSiNoTieneTratamientoFiscal(valorFacial, valorTransadoNeto);
         }
 
-        private static double EstablecerRendimientoPorDescuentoSiTratamientoFiscalEsVerdadero(double valorFacial, double valorTransadoNeto, double tasaDeImpuesto, DateTime fechaDeVencimiento, DateTime fechaActual)
+        private static double AsignarRendimientoPorDescuentoSiNoTieneTratamientoFiscal(double valorFacial, double valorTransadoNeto)
+        {
+            return valorFacial - valorTransadoNeto;
+        }
+
+        private static double AsignarRendimientoPorDescuentoSiTieneTratamientoFiscal(double valorFacial, double valorTransadoNeto, 
+            double tasaDeImpuesto, DateTime fechaDeVencimiento, DateTime fechaActual)
         {
             double valorTransadoBruto = ObtenerValorTransadoBruto(valorFacial, valorTransadoNeto, tasaDeImpuesto, fechaDeVencimiento, fechaActual);
+            return CalcularRendimientoPorDescuento(valorFacial, valorTransadoBruto);
+        }
+
+        private static double CalcularRendimientoPorDescuento(double valorFacial, double valorTransadoBruto)
+        {
             return valorFacial - valorTransadoBruto;
         }
 
-        private static double ObtenerValorTransadoBruto(double valorFacial, double valorTransadoNeto, double tasaDeImpuesto, DateTime fechaDeVencimiento, DateTime fechaActual)
+        private static double ObtenerValorTransadoBruto(double valorFacial, double valorTransadoNeto, double tasaDeImpuesto, 
+            DateTime fechaDeVencimiento, DateTime fechaActual)
         {
             double diasAlVencimiento = ObtenerDiasAlVencimiento(fechaDeVencimiento, fechaActual);
             double tasaBruta = ObtenerTasaBruta(valorFacial, valorTransadoNeto, tasaDeImpuesto, diasAlVencimiento);
-            return DeterminarValorTransadoBruto(valorFacial, diasAlVencimiento, tasaBruta);
+            return CalcularValorTransadoBruto(valorFacial, diasAlVencimiento, tasaBruta);
         }
 
         private static double ObtenerDiasAlVencimiento(DateTime fechaDeVencimiento, DateTime fechaActual)
         {
-            TimeSpan diasAlVencimiento = DeterminarDiasAlVencimiento(fechaDeVencimiento, fechaActual);
-            return ConvertirDiasAlVencimientoAEntero(diasAlVencimiento);
+            TimeSpan diasAlVencimiento = ObtengaLaDiferencia(fechaDeVencimiento, fechaActual);
+            return ObtengaLosDiasTotales(diasAlVencimiento);
         }
 
-        private static TimeSpan DeterminarDiasAlVencimiento(DateTime fechaDeVencimiento, DateTime fechaActual)
+        private static TimeSpan ObtengaLaDiferencia(DateTime fechaDeVencimiento, DateTime fechaActual)
         {
             return fechaDeVencimiento - fechaActual;
         }
 
-        private static double ConvertirDiasAlVencimientoAEntero(TimeSpan diasAlVencimiento)
+        private static double ObtengaLosDiasTotales(TimeSpan diasAlVencimiento)
         {
             return diasAlVencimiento.TotalDays;
         }
 
-        private static double DeterminarValorTransadoBruto(double valorFacial, double diasAlVencimiento, double tasaBruta)
+        private static double CalcularValorTransadoBruto(double valorFacial, double diasAlVencimiento, double tasaBruta)
         {
             return valorFacial / (1 + ((tasaBruta / 100) * (diasAlVencimiento / 365)));
         }
@@ -75,11 +79,6 @@ namespace Ccharpentierl905.Negocio.ConFunciones.RendimientoPorDescuento
         private static double ObtenerTasaNeta(double valorFacial, double valorTransadoNeto, double diasAlVencimiento)
         {
             return ((valorFacial - valorTransadoNeto) / (valorTransadoNeto * (diasAlVencimiento / 365))) * 100;
-        }
-
-        private static double EstablecerRendimientoPorDescuentoSiTratamientoFiscalEsFalso(double valorFacial, double valorTransadoNeto)
-        {
-            return valorFacial - valorTransadoNeto;
         }
 
         private static double RedondearConCuatroDecimales(double rendimientoPorDescuento)
