@@ -5,7 +5,7 @@ namespace Ccharpentierl905.Negocio.ComoUnProcedimiento.Impuesto
     public class Impuesto
     {
         public static double DeterminarImpuesto(double valorFacial, double valorTransadoNeto, double tasaDeImpuesto,
-            DateTime fechaDeVencimiento, DateTime fechaActual, Boolean tieneTratamientoFiscal, double rendimientoPorDescuento)
+            DateTime fechaDeVencimiento, DateTime fechaActual, Boolean tieneTratamientoFiscal)
         {
             double impuesto = 0;
 
