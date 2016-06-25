@@ -5,7 +5,7 @@ using System;
 namespace Ccharpentierl905.Negocio.UnitTests.ConFunciones.Impuesto_TESTS
 {
     [TestClass]
-    public class Impuesto_Tests
+    public class Impuesto_ConFunciones_Tests
     {
         private double elResultadoObtenido;
         private double elResultadoEsperado;

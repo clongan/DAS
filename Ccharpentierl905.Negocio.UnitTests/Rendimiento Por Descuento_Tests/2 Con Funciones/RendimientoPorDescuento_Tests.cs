@@ -5,7 +5,7 @@ using System;
 namespace Ccharpentierl905.Negocio.UnitTests.ConFunciones.RendimientoPorDescuento_TESTS
 {
     [TestClass]
-    public class RendimientoPorDescuento_Tests
+    public class RendimientoPorDescuento_ConFunciones_Tests
     {
         private double elResultadoObtenido;
         private double elResultadoEsperado;

@@ -5,7 +5,7 @@ using System;
 namespace Ccharpentierl905.Negocio.UnitTests.ConFunciones.CodigosDeReferencia_TESTS
 {
     [TestClass]
-    public class CodigosDeReferencia_Tests
+    public class CodigosDeReferencia_ConFunciones_Tests
     {
         private string elResultadoObtenido;
         private string elResultadoEsperado;
