@@ -52,6 +52,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Codigos de Referencia_Tests\3 Con Objetos\CodigosDeReferencia_Tests.cs" />
     <Compile Include="Impuesto\1 Procedimiento\Impuesto_Tests.cs" />
     <Compile Include="Impuesto\2 Con Funciones\Impuesto_Tests.cs" />
     <Compile Include="Rendimiento Por Descuento_Tests\2 Con Funciones\RendimientoPorDescuento_Tests.cs" />
@@ -61,7 +62,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Codigos de Referencia_Tests\3 Con Objetos\" />
     <Folder Include="Rendimiento Por Descuento_Tests\3 Con Objetos\" />
   </ItemGroup>
   <ItemGroup>

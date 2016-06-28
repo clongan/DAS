@@ -1,11 +1,11 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Ccharpentierl905.Negocio.ComoUnProcedimiento.CodigosDeReferencia;
+using Ccharpentierl905.Negocio.ConObjetos.CodigosDeReferencia;
 using System;
 
-namespace Ccharpentierl905.Negocio.UnitTests.ComoUnProcedimiento.CodigosDeReferencia_TESTS
+namespace Ccharpentierl905.Negocio.UnitTests.ConObjetos.CodigosDeReferencia_TESTS
 {
     [TestClass]
-    public class CodigosDeReferencia_ComoUnProcedimiento_Tests
+    public class CodigosDeReferencia_ConObjetos_Tests
     {
         private string elResultadoObtenido;
         private string elResultadoEsperado;
@@ -24,7 +24,7 @@ namespace Ccharpentierl905.Negocio.UnitTests.ComoUnProcedimiento.CodigosDeRefere
             sistema = "22";
             consecutivo = "888888888888";
 
-            elResultadoObtenido =  CodigosDeReferencia.GenerarCodigoDeReferencia(fecha, cliente,
+            elResultadoObtenido = CodigosDeReferencia.GenerarCodigoDeReferencia(fecha, cliente,
                 sistema, consecutivo);
 
             Assert.AreEqual(elResultadoEsperado, elResultadoObtenido);
