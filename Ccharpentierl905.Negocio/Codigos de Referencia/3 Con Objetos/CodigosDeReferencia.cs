@@ -7,7 +7,7 @@ namespace ConObjetos
         public static string GenerarCodigoDeReferencia(DateTime fecha, string cliente,
             string sistema, string consecutivo)
         {
-            return new CodigoDeReferencia(fecha, cliente, sistema, consecutivo).ObtenerCodigoDeReferencia();
+            return new CodigoDeReferenciaCompleto(fecha, cliente, sistema, consecutivo).ObtenerCodigoDeReferencia();
         }
 
     }

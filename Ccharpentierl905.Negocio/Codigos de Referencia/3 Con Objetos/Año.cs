@@ -1,14 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConObjetos
 {
-    class Año
+    public class Año
     {
         private int año;
+
+        public Año()
+        {
+        }
 
         public Año(DateTime fecha)
         {

@@ -3,12 +3,12 @@ using System;
 
 namespace ConObjetos
 {
-    class CodigoDeReferencia
+    class CodigoDeReferenciaCompleto
     {
         string codigoDeReferenciaSinVerificador;
         int verificador;
 
-        public CodigoDeReferencia(DateTime fecha, string cliente,
+        public CodigoDeReferenciaCompleto(DateTime fecha, string cliente,
             string sistema, string consecutivo)
         {
             codigoDeReferenciaSinVerificador = new CodigoDeReferenciaSinVerificador(fecha, cliente, sistema, consecutivo).ComoTexto();

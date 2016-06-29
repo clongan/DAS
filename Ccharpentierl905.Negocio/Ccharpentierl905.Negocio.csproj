@@ -46,7 +46,7 @@
     <Compile Include="Codigos de Referencia\1 Procedimiento\CalculoDeDigitoVerificador.cs" />
     <Compile Include="Codigos de Referencia\1 Procedimiento\CodigosDeReferencia.cs" />
     <Compile Include="Codigos de Referencia\3 Con Objetos\Año.cs" />
-    <Compile Include="Codigos de Referencia\3 Con Objetos\CodigoDeReferencia.cs" />
+    <Compile Include="Codigos de Referencia\3 Con Objetos\CodigoDeReferenciaCompleto.cs" />
     <Compile Include="Codigos de Referencia\3 Con Objetos\CodigoDeReferenciaSinVerificador.cs" />
     <Compile Include="Codigos de Referencia\3 Con Objetos\CodigosDeReferencia.cs" />
     <Compile Include="Codigos de Referencia\3 Con Objetos\FechaComoTexto.cs" />
