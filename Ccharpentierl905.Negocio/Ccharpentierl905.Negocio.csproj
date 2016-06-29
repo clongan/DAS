@@ -41,11 +41,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Codigos de Referencia\3 Con Objetos\CalculoDeDigitoVerificador.cs" />
-    <Compile Include="Codigos de Referencia\3 Con Objetos\CodigosDeReferencia.cs" />
     <Compile Include="Codigos de Referencia\2 Con Funciones\CalculoDeDigitoVerificador.cs" />
     <Compile Include="Codigos de Referencia\2 Con Funciones\CodigosDeReferencia.cs" />
     <Compile Include="Codigos de Referencia\1 Procedimiento\CalculoDeDigitoVerificador.cs" />
     <Compile Include="Codigos de Referencia\1 Procedimiento\CodigosDeReferencia.cs" />
+    <Compile Include="Codigos de Referencia\3 Con Objetos\Año.cs" />
+    <Compile Include="Codigos de Referencia\3 Con Objetos\CodigoDeReferencia.cs" />
+    <Compile Include="Codigos de Referencia\3 Con Objetos\CodigoDeReferenciaSinVerificador.cs" />
+    <Compile Include="Codigos de Referencia\3 Con Objetos\CodigosDeReferencia.cs" />
+    <Compile Include="Codigos de Referencia\3 Con Objetos\FechaComoTexto.cs" />
+    <Compile Include="Codigos de Referencia\3 Con Objetos\Mes.cs" />
+    <Compile Include="Codigos de Referencia\3 Con Objetos\Dia.cs" />
     <Compile Include="Impuesto\2 Con Funciones\Impuesto.cs" />
     <Compile Include="Impuesto\1 Procedimiento\Impuesto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,7 +1,7 @@
 ﻿using System;
 using Ccharpentierl905.Negocio.ComoUnProcedimiento.Calculos;
 
-namespace Ccharpentierl905.Negocio.ComoUnProcedimiento.CodigosDeReferencia
+namespace ComoUnProcedimiento
 {
     public class CodigosDeReferencia
     {

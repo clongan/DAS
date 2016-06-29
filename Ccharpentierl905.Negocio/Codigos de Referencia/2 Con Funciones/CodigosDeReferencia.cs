@@ -1,7 +1,7 @@
 ﻿using System;
 using Ccharpentierl905.Negocio.ConFunciones.Calculos;
 
-namespace Ccharpentierl905.Negocio.ConFunciones.CodigosDeReferencia
+namespace ConFunciones
 {
     public class CodigosDeReferencia
     {

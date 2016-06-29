@@ -1,8 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Ccharpentierl905.Negocio.ComoUnProcedimiento.CodigosDeReferencia;
+using ComoUnProcedimiento;
 using System;
 
-namespace Ccharpentierl905.Negocio.UnitTests.ComoUnProcedimiento.CodigosDeReferencia_TESTS
+namespace ComoUnProcedimiento.CodigosDeReferencia_TESTS
 {
     [TestClass]
     public class CodigosDeReferencia_ComoUnProcedimiento_Tests

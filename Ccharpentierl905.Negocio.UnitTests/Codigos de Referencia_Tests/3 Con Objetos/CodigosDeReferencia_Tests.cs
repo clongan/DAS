@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Ccharpentierl905.Negocio.ConObjetos.CodigosDeReferencia;
+using ConObjetos;
 using System;
 
 namespace Ccharpentierl905.Negocio.UnitTests.ConObjetos.CodigosDeReferencia_TESTS

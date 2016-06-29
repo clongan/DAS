@@ -1,8 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Ccharpentierl905.Negocio.ConFunciones.CodigosDeReferencia;
+using ConFunciones;
 using System;
 
-namespace Ccharpentierl905.Negocio.UnitTests.ConFunciones.CodigosDeReferencia_TESTS
+namespace ConFunciones.CodigosDeReferencia_TESTS
 {
     [TestClass]
     public class CodigosDeReferencia_ConFunciones_Tests
