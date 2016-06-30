@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Ccharpentierl905.Negocio.ConFunciones.RendimientoPorDescuento;
+using ConFunciones;
 using System;
 
 namespace Ccharpentierl905.Negocio.UnitTests.ConFunciones.RendimientoPorDescuento_TESTS

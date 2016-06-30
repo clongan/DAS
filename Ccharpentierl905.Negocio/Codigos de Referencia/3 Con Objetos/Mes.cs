@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConObjetos
 {
-    class Mes
+    public class Mes
     {
         private int mes;
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConObjetos
 {
-    class FechaComoTexto
+    public class FechaComoTexto
     {
         string dia;
         string mes;

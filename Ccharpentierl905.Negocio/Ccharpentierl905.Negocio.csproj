@@ -57,10 +57,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rendimiento Por Descuento\1 Procedimiento\RendimientoPorDescuento.cs" />
     <Compile Include="Rendimiento Por Descuento\2 Con Funciones\RendimientoPorDescuento.cs" />
+    <Compile Include="Rendimiento Por Descuento\3 Con Objetos\RendimientoPorDescuento.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Rendimiento Por Descuento\3 Con Objetos\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

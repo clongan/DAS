@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConObjetos
 {
-    class CodigoDeReferenciaSinVerificador
+    public class CodigoDeReferenciaSinVerificador
     {
         string fechaCompletaComoTexto;
         string clienteFormateado;

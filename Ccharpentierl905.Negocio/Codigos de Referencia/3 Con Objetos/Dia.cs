@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConObjetos
 {
-    class Dia
+    public class Dia
     {
         private int dia;
 

@@ -3,7 +3,7 @@ using System;
 
 namespace ConObjetos
 {
-    class CodigoDeReferenciaCompleto
+    public class CodigoDeReferenciaCompleto
     {
         string codigoDeReferenciaSinVerificador;
         int verificador;

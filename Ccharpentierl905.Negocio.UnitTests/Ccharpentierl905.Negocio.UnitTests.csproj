@@ -53,7 +53,11 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Codigos de Referencia_Tests\3 Con Objetos\Año\ComoTexto_Tests.cs" />
-    <Compile Include="Codigos de Referencia_Tests\3 Con Objetos\CodigosDeReferencia_Tests.cs" />
+    <Compile Include="Codigos de Referencia_Tests\3 Con Objetos\CodigoDeReferenciaCompleto\ComoTexto_Tests.cs" />
+    <Compile Include="Codigos de Referencia_Tests\3 Con Objetos\CodigoDeReferenciaSinVerificador\ComoTexto_Tests.cs" />
+    <Compile Include="Codigos de Referencia_Tests\3 Con Objetos\Dia\ComoTexto_Tests.cs" />
+    <Compile Include="Codigos de Referencia_Tests\3 Con Objetos\FechaComoTexto\ComoTexto_Tests.cs" />
+    <Compile Include="Codigos de Referencia_Tests\3 Con Objetos\Mes\ComoTexto_Tests.cs" />
     <Compile Include="Impuesto_Tests\1 Procedimiento\Impuesto_Tests.cs" />
     <Compile Include="Impuesto_Tests\2 Con Funciones\Impuesto_Tests.cs" />
     <Compile Include="Rendimiento Por Descuento_Tests\2 Con Funciones\RendimientoPorDescuento_Tests.cs" />
@@ -63,11 +67,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Codigos de Referencia_Tests\3 Con Objetos\CodigoDeReferenciaCompleto\" />
-    <Folder Include="Codigos de Referencia_Tests\3 Con Objetos\CodigoDeReferenciaSinVerificador\" />
-    <Folder Include="Codigos de Referencia_Tests\3 Con Objetos\Dia\" />
-    <Folder Include="Codigos de Referencia_Tests\3 Con Objetos\FechaComoTexto\" />
-    <Folder Include="Codigos de Referencia_Tests\3 Con Objetos\Mes\" />
     <Folder Include="Rendimiento Por Descuento_Tests\3 Con Objetos\" />
   </ItemGroup>
   <ItemGroup>
