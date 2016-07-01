@@ -55,6 +55,7 @@
     <Compile Include="Codigos de Referencia_Tests\3 Con Objetos\Año\ComoTexto_Tests.cs" />
     <Compile Include="Codigos de Referencia_Tests\3 Con Objetos\CodigoDeReferenciaCompleto\ComoTexto_Tests.cs" />
     <Compile Include="Codigos de Referencia_Tests\3 Con Objetos\CodigoDeReferenciaSinVerificador\ComoTexto_Tests.cs" />
+    <Compile Include="Codigos de Referencia_Tests\3 Con Objetos\CodigosDeReferencia_Tests\CodigosDeReferencia_Tests.cs" />
     <Compile Include="Codigos de Referencia_Tests\3 Con Objetos\Dia\ComoTexto_Tests.cs" />
     <Compile Include="Codigos de Referencia_Tests\3 Con Objetos\FechaComoTexto\ComoTexto_Tests.cs" />
     <Compile Include="Codigos de Referencia_Tests\3 Con Objetos\Mes\ComoTexto_Tests.cs" />
