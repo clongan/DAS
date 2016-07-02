@@ -2,7 +2,7 @@
 using ConFunciones;
 using System;
 
-namespace ConFunciones.CodigosDeReferencia_TESTS
+namespace ConFunciones_TESTS
 {
     [TestClass]
     public class CodigosDeReferencia_ConFunciones_Tests

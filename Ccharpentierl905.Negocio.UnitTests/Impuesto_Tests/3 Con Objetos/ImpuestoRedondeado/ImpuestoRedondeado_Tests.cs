@@ -1,11 +1,11 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ConFunciones;
-using System;
+﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using ConObjetos;
 
-namespace ConFunciones_TESTS
+namespace ConObjetos_Tests
 {
     [TestClass]
-    public class Impuesto_ConFunciones_Tests
+    public class ImpuestoRedondeado_Tests
     {
         private double elResultadoObtenido;
         private double elResultadoEsperado;
@@ -16,27 +16,8 @@ namespace ConFunciones_TESTS
         private DateTime fechaActual;
         private Boolean tratamientoFiscal;
 
-
         [TestMethod]
-        public void GeneraImpuesto_TieneTratamientoFiscal_RedondeoHaciaAbajo()
-        {
-            elResultadoEsperado = 1621.6216;
-
-            valorFacial = 320000;
-            valorTransadoNeto = 300000;
-            tasaDeImpuesto = 0.08;
-            fechaDeVencimiento = new DateTime(2016, 10, 10);
-            fechaActual = new DateTime(2016, 3, 3);
-            tratamientoFiscal = true;
-
-            elResultadoObtenido = Impuesto.DeterminarImpuesto(valorFacial, valorTransadoNeto,
-                tasaDeImpuesto, fechaDeVencimiento, fechaActual, tratamientoFiscal);
-
-            Assert.AreEqual(elResultadoEsperado, elResultadoObtenido);
-        }
-
-        [TestMethod]
-        public void GeneraImpuesto_TieneTratamientoFiscal_RedondeoHaciaArriba()
+        public void ObtenerImpuesto_RedondeoHaciaArriba_Test()
         {
             elResultadoEsperado = 1659.3592;
 
@@ -54,16 +35,16 @@ namespace ConFunciones_TESTS
         }
 
         [TestMethod]
-        public void GeneraImpuesto_NoTieneTratamientoFiscal_SinRedondeo()
+        public void ObtenerImpuesto_RedondeoHaciaAbajo_Test()
         {
-            elResultadoEsperado = 0;
+            elResultadoEsperado = 1621.6216;
 
             valorFacial = 320000;
-            valorTransadoNeto = 300000.0001;
+            valorTransadoNeto = 300000;
             tasaDeImpuesto = 0.08;
             fechaDeVencimiento = new DateTime(2016, 10, 10);
             fechaActual = new DateTime(2016, 3, 3);
-            tratamientoFiscal = false;
+            tratamientoFiscal = true;
 
             elResultadoObtenido = Impuesto.DeterminarImpuesto(valorFacial, valorTransadoNeto,
                 tasaDeImpuesto, fechaDeVencimiento, fechaActual, tratamientoFiscal);

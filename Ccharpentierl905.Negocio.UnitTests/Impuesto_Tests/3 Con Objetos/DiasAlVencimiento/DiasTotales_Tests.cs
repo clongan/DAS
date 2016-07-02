@@ -5,16 +5,16 @@ using ConObjetos;
 namespace ConObjetos_TESTS
 {
     [TestClass]
-    public class RendimientoPorDescuento_ValorTransadoBruto_Tests
+    public class Impuesto_DiasAlVencimiento_Tests
     {
         private object elResultadoEsperado;
         private double elResultadoObtenido;
 
         [TestMethod]
-        public void ValorTransadoBruto()
+        public void DiasAlVencimiento_DosFechas_Diferencia()
         {
-            elResultadoEsperado = 298378.378378378;
-            elResultadoObtenido = new ValorTransadoBruto(320000, 300000, 0.08, new DateTime(2016, 10, 10), new DateTime(2016, 3, 3)).ObtenerValorTransadoBruto();
+            elResultadoEsperado = 221.00;
+            elResultadoObtenido = new DiasAlVencimiento(new DateTime(2016, 10, 10), new DateTime(2016, 3, 3)).DiasTotales();
             Assert.AreEqual(elResultadoObtenido, elResultadoEsperado);
         }
     }

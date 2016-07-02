@@ -5,7 +5,7 @@ using ConObjetos;
 namespace ConObjetos_Tests
 {
     [TestClass]
-    public class CodigosDeReferencia_Dia_Tests
+    public class CodigosDeReferencia_ConObjetos_Dia_Tests
     {
         private string elResultadoEsperado;
         private string elResultadoObtenido;

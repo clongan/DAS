@@ -2,7 +2,7 @@
 using ConFunciones;
 using System;
 
-namespace Ccharpentierl905.Negocio.UnitTests.ConFunciones.RendimientoPorDescuento_TESTS
+namespace ConFunciones_TESTS
 {
     [TestClass]
     public class RendimientoPorDescuento_ConFunciones_Tests

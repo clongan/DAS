@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Ccharpentierl905.Negocio.ComoUnProcedimiento.Impuesto
+namespace ComoUnProcedimiento
 {
     public class Impuesto
     {

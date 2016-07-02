@@ -2,10 +2,10 @@
 using ConFunciones;
 using System;
 
-namespace ConFunciones_TESTS
+namespace ConObjetos_TESTS
 {
     [TestClass]
-    public class Impuesto_ConFunciones_Tests
+    public class RendimientoPorDescuento_ConObjetos_Tests
     {
         private double elResultadoObtenido;
         private double elResultadoEsperado;
@@ -18,9 +18,9 @@ namespace ConFunciones_TESTS
 
 
         [TestMethod]
-        public void GeneraImpuesto_TieneTratamientoFiscal_RedondeoHaciaAbajo()
+        public void GeneraRendimientoPorDescuento_TieneTratamientoFiscal_RedondeoHaciaAbajo()
         {
-            elResultadoEsperado = 1621.6216;
+            elResultadoEsperado = 21621.6216;
 
             valorFacial = 320000;
             valorTransadoNeto = 300000;
@@ -29,16 +29,16 @@ namespace ConFunciones_TESTS
             fechaActual = new DateTime(2016, 3, 3);
             tratamientoFiscal = true;
 
-            elResultadoObtenido = Impuesto.DeterminarImpuesto(valorFacial, valorTransadoNeto,
+            elResultadoObtenido = RendimientoPorDescuento.DeterminarRendimientoPorDescuento(valorFacial, valorTransadoNeto,
                 tasaDeImpuesto, fechaDeVencimiento, fechaActual, tratamientoFiscal);
 
             Assert.AreEqual(elResultadoEsperado, elResultadoObtenido);
         }
 
         [TestMethod]
-        public void GeneraImpuesto_TieneTratamientoFiscal_RedondeoHaciaArriba()
+        public void GeneraRendimientoPorDescuento_TieneTratamientoFiscal_RedondeoHaciaArriba()
         {
-            elResultadoEsperado = 1659.3592;
+            elResultadoEsperado = 22159.3592;
 
             valorFacial = 320500;
             valorTransadoNeto = 300000;
@@ -47,16 +47,16 @@ namespace ConFunciones_TESTS
             fechaActual = new DateTime(2016, 3, 3);
             tratamientoFiscal = true;
 
-            elResultadoObtenido = Impuesto.DeterminarImpuesto(valorFacial, valorTransadoNeto,
+            elResultadoObtenido = RendimientoPorDescuento.DeterminarRendimientoPorDescuento(valorFacial, valorTransadoNeto,
                 tasaDeImpuesto, fechaDeVencimiento, fechaActual, tratamientoFiscal);
 
             Assert.AreEqual(elResultadoEsperado, elResultadoObtenido);
         }
 
         [TestMethod]
-        public void GeneraImpuesto_NoTieneTratamientoFiscal_SinRedondeo()
+        public void GeneraRendimientoPorDescuento_NoTieneTratamientoFiscal_SinRedondeo()
         {
-            elResultadoEsperado = 0;
+            elResultadoEsperado = 19999.9999;
 
             valorFacial = 320000;
             valorTransadoNeto = 300000.0001;
@@ -65,7 +65,7 @@ namespace ConFunciones_TESTS
             fechaActual = new DateTime(2016, 3, 3);
             tratamientoFiscal = false;
 
-            elResultadoObtenido = Impuesto.DeterminarImpuesto(valorFacial, valorTransadoNeto,
+            elResultadoObtenido = RendimientoPorDescuento.DeterminarRendimientoPorDescuento(valorFacial, valorTransadoNeto,
                 tasaDeImpuesto, fechaDeVencimiento, fechaActual, tratamientoFiscal);
 
             Assert.AreEqual(elResultadoEsperado, elResultadoObtenido);

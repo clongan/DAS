@@ -1,8 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Ccharpentierl905.Negocio.ComoUnProcedimiento.Impuesto;
+using ComoUnProcedimiento;
 using System;
 
-namespace Ccharpentierl905.Negocio.UnitTests.ComoUnProcedimiento.Impuesto_TESTS
+namespace ComoUnProcedimiento_TESTS
 {
     [TestClass]
     public class Impuesto_ComoUnProcedimiento_Tests

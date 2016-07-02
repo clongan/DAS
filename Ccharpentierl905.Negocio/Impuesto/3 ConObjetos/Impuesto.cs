@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ConFunciones
+namespace ConObjetos
 {
     public class Impuesto
     {

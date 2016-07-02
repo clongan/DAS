@@ -2,10 +2,10 @@
 using ConFunciones;
 using System;
 
-namespace ConFunciones_TESTS
+namespace ConObjetos_TESTS
 {
     [TestClass]
-    public class Impuesto_ConFunciones_Tests
+    public class Impuesto_ConObjetos_Tests
     {
         private double elResultadoObtenido;
         private double elResultadoEsperado;

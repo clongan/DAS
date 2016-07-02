@@ -1,11 +1,11 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Ccharpentierl905.Negocio.ComoUnProcedimiento.RendimientoPorDescuento;
-using System;
+﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using ConObjetos;
 
-namespace ComoUnProcedimiento_TESTS
+namespace ConObjetos_Tests
 {
     [TestClass]
-    public class RendimientoPorDescuento_ComoUnProcedimiento_Tests
+    public class RendimientoPorDescuentoRedondeado_Tests
     {
         private double elResultadoObtenido;
         private double elResultadoEsperado;
@@ -16,27 +16,8 @@ namespace ComoUnProcedimiento_TESTS
         private DateTime fechaActual;
         private Boolean tratamientoFiscal;
 
-
         [TestMethod]
-        public void GeneraRendimientoPorDescuento_TieneTratamientoFiscal_RedondeoHaciaAbajo()
-        {
-            elResultadoEsperado = 21621.6216;
-
-            valorFacial = 320000;
-            valorTransadoNeto = 300000;
-            tasaDeImpuesto = 0.08;
-            fechaDeVencimiento = new DateTime(2016, 10, 10);
-            fechaActual = new DateTime(2016, 3, 3);
-            tratamientoFiscal = true;
-
-            elResultadoObtenido = RendimientoPorDescuento.DeterminarRendimientoPorDescuento(valorFacial, valorTransadoNeto,
-                tasaDeImpuesto, fechaDeVencimiento, fechaActual, tratamientoFiscal);
-
-            Assert.AreEqual(elResultadoEsperado, elResultadoObtenido);
-        }
-
-        [TestMethod]
-        public void GeneraRendimientoPorDescuento_TieneTratamientoFiscal_RedondeoHaciaArriba()
+        public void ObtenerRendimientoPorDescuento_RedondeoHaciaArriba_Test()
         {
             elResultadoEsperado = 22159.3592;
 
@@ -54,16 +35,16 @@ namespace ComoUnProcedimiento_TESTS
         }
 
         [TestMethod]
-        public void GeneraRendimientoPorDescuento_NoTieneTratamientoFiscal_SinRedondeo()
+        public void ObtenerRendimientoPorDescuento_RedondeoHaciaAbajo_Test()
         {
-            elResultadoEsperado = 19999.9999;
+            elResultadoEsperado = 21621.6216;
 
             valorFacial = 320000;
-            valorTransadoNeto = 300000.0001;
+            valorTransadoNeto = 300000;
             tasaDeImpuesto = 0.08;
             fechaDeVencimiento = new DateTime(2016, 10, 10);
             fechaActual = new DateTime(2016, 3, 3);
-            tratamientoFiscal = false;
+            tratamientoFiscal = true;
 
             elResultadoObtenido = RendimientoPorDescuento.DeterminarRendimientoPorDescuento(valorFacial, valorTransadoNeto,
                 tasaDeImpuesto, fechaDeVencimiento, fechaActual, tratamientoFiscal);

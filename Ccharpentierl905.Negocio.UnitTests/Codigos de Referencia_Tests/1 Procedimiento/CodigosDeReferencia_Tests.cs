@@ -2,7 +2,7 @@
 using ComoUnProcedimiento;
 using System;
 
-namespace ComoUnProcedimiento.CodigosDeReferencia_TESTS
+namespace ComoUnProcedimiento_TESTS
 {
     [TestClass]
     public class CodigosDeReferencia_ComoUnProcedimiento_Tests
