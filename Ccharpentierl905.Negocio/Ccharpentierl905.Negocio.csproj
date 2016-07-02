@@ -57,7 +57,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rendimiento Por Descuento\1 Procedimiento\RendimientoPorDescuento.cs" />
     <Compile Include="Rendimiento Por Descuento\2 Con Funciones\RendimientoPorDescuento.cs" />
+    <Compile Include="Rendimiento Por Descuento\3 Con Objetos\DiasAlVencimiento.cs" />
     <Compile Include="Rendimiento Por Descuento\3 Con Objetos\RendimientoPorDescuento.cs" />
+    <Compile Include="Rendimiento Por Descuento\3 Con Objetos\RendimientoPorDescuentoConTratamientoFiscal.cs" />
+    <Compile Include="Rendimiento Por Descuento\3 Con Objetos\RendimientoPorDescuentoRedondeado.cs" />
+    <Compile Include="Rendimiento Por Descuento\3 Con Objetos\TasaBruta.cs" />
+    <Compile Include="Rendimiento Por Descuento\3 Con Objetos\ValorTransadoBruto.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
