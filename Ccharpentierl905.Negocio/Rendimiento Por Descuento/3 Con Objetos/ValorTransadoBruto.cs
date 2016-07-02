@@ -16,8 +16,18 @@ namespace ConObjetos
             DateTime fechaDeVencimiento, DateTime fechaActual)
         {
             this.valorFacial = valorFacial;
-            diasAlVencimiento = new DiasAlVencimiento(fechaDeVencimiento, fechaActual).DiasTotales();
-            tasaBruta = new TasaBruta(valorFacial, valorTransadoNeto, tasaDeImpuesto, diasAlVencimiento).ObtenerTasaBruta();
+            diasAlVencimiento = ObtenerDiasAlVencimiento(fechaDeVencimiento, fechaActual);
+            tasaBruta = ObtenerTasaBruta(valorFacial, valorTransadoNeto, tasaDeImpuesto);
+        }
+
+        private double ObtenerDiasAlVencimiento(DateTime fechaDeVencimiento, DateTime fechaActual)
+        {
+            return new DiasAlVencimiento(fechaDeVencimiento, fechaActual).DiasTotales();
+        }
+
+        private double ObtenerTasaBruta(double valorFacial, double valorTransadoNeto, double tasaDeImpuesto)
+        {
+            return new TasaBruta(valorFacial, valorTransadoNeto, tasaDeImpuesto, diasAlVencimiento).ObtenerTasaBruta();
         }
 
         public double ObtenerValorTransadoBruto()

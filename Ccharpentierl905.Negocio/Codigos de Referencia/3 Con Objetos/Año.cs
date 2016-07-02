@@ -6,13 +6,14 @@ namespace ConObjetos
     {
         private int año;
 
-        public Año()
-        {
-        }
-
         public Año(DateTime fecha)
         {
-            año = fecha.Year;
+            año = ObtenerAñoDeFechaCompleta(fecha);
+        }
+
+        private int ObtenerAñoDeFechaCompleta(DateTime fecha)
+        {
+            return fecha.Year;
         }
 
         public string ComoTexto()

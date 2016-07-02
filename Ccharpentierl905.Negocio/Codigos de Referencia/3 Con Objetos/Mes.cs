@@ -12,7 +12,12 @@ namespace ConObjetos
 
         public Mes(DateTime fecha)
         {
-            mes = fecha.Month;
+            mes = ObtenerMesDeFechaCompleta(fecha);
+        }
+
+        private int ObtenerMesDeFechaCompleta(DateTime fecha)
+        {
+            return fecha.Month;
         }
 
         public string ComoTexto()

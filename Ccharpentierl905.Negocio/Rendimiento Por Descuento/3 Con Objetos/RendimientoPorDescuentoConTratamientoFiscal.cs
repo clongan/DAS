@@ -15,7 +15,14 @@ namespace ConObjetos
             double tasaDeImpuesto, DateTime fechaDeVencimiento, DateTime fechaActual)
         {
             this.valorFacial = valorFacial;
-            valorTransadoBruto = new ValorTransadoBruto(valorFacial, valorTransadoNeto, tasaDeImpuesto, fechaDeVencimiento, fechaActual).ObtenerValorTransadoBruto();
+            valorTransadoBruto = ObtenerElValorTransadoBruto(valorFacial, valorTransadoNeto,
+             tasaDeImpuesto, fechaDeVencimiento, fechaActual);
+        }
+
+        private double ObtenerElValorTransadoBruto(double valorFacial, double valorTransadoNeto,
+            double tasaDeImpuesto, DateTime fechaDeVencimiento, DateTime fechaActual)
+        {
+            return new ValorTransadoBruto(valorFacial, valorTransadoNeto, tasaDeImpuesto, fechaDeVencimiento, fechaActual).ObtenerValorTransadoBruto();
         }
 
         public double CalcularRendimientoPorDescuento()

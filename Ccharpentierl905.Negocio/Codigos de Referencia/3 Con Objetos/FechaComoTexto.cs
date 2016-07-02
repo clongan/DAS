@@ -14,10 +14,26 @@ namespace ConObjetos
 
         public FechaComoTexto(DateTime fecha)
         {
-            dia = new Dia(fecha).ComoTexto();
-            mes = new Mes(fecha).ComoTexto();
-            año = new Año(fecha).ComoTexto();
+            dia = ObtenerDiaDeFechaCompleta(fecha);
+            mes = ObtenerMesDeFechaCompleta(fecha);
+            año = ObtenerAñoDeFechaCompleta(fecha);
         }
+
+        private string ObtenerDiaDeFechaCompleta(DateTime fecha)
+        {
+            return new Dia(fecha).ComoTexto();
+        }
+
+        private string ObtenerMesDeFechaCompleta(DateTime fecha)
+        {
+            return new Mes(fecha).ComoTexto();
+        }
+
+        private string ObtenerAñoDeFechaCompleta(DateTime fecha)
+        {
+            return new Año(fecha).ComoTexto();
+        }
+
         public string ComoTexto()
         {
             return año + mes + dia;

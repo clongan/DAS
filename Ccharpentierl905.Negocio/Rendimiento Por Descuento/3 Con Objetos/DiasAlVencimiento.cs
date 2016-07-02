@@ -8,7 +8,12 @@ namespace ConObjetos
 
         public DiasAlVencimiento(DateTime fechaDeVencimiento, DateTime fechaActual)
         {
-            diasAlVencimiento = fechaDeVencimiento - fechaActual;
+            diasAlVencimiento = ObtenerDiasAlVencimiento(fechaDeVencimiento, fechaActual);
+        }
+
+        private TimeSpan ObtenerDiasAlVencimiento(DateTime fechaDeVencimiento, DateTime fechaActual)
+        {
+            return fechaDeVencimiento - fechaActual;
         }
 
         public double DiasTotales()

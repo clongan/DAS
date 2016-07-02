@@ -14,7 +14,12 @@ namespace ConObjetos
         public TasaBruta(double valorFacial, double valorTransadoNeto, double tasaDeImpuesto, double diasAlVencimiento)
         {
             this.tasaDeImpuesto = tasaDeImpuesto;
-            tasaNeta = ((valorFacial - valorTransadoNeto) / (valorTransadoNeto * (diasAlVencimiento / 365))) * 100;
+            tasaNeta = CalcularTasaNeta(valorFacial, valorTransadoNeto, tasaDeImpuesto, diasAlVencimiento);
+        }
+
+        private double CalcularTasaNeta(double valorFacial, double valorTransadoNeto, double tasaDeImpuesto, double diasAlVencimiento)
+        {
+            return ((valorFacial - valorTransadoNeto) / (valorTransadoNeto * (diasAlVencimiento / 365))) * 100;
         }
 
         public double ObtenerTasaBruta()
