@@ -20,7 +20,12 @@ namespace ConObjetos
             if (tieneTratamientoFiscal)
                 return new RendimientoPorDescuentoConTratamientoFiscal(valorFacial, valorTransadoNeto,tasaDeImpuesto, fechaDeVencimiento, fechaActual).CalcularRendimientoPorDescuento();
             else
-                return valorFacial - valorTransadoNeto;
+                return ObtenerRendimientoPorDescuentoSinTratamientoFiscal(valorFacial, valorTransadoNeto);
+        }
+
+        private static double ObtenerRendimientoPorDescuentoSinTratamientoFiscal(double valorFacial, double valorTransadoNeto)
+        {
+            return valorFacial - valorTransadoNeto;
         }
 
         public double ObtenerRendimientoPorDescuento()
