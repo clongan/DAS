@@ -7,8 +7,8 @@ namespace ConObjetos_Tests
     [TestClass]
     public class CodigosDeReferencia_ConObjetos_CodigoDeReferenciaSinVerificador_Tests
     {
-        private object elResultadoEsperado;
-        private object elResultadoObtenido;
+        private string elResultadoEsperado;
+        private string elResultadoObtenido;
 
         [TestMethod]
         public void ComoTexto_GeneraCodigoDeReferenciaSinVerificador()

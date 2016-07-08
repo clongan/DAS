@@ -52,32 +52,39 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Codigos de Referencia_Tests\3 Con Objetos\Año\ComoTexto_Tests.cs" />
-    <Compile Include="Codigos de Referencia_Tests\3 Con Objetos\CodigoDeReferenciaCompleto\ComoTexto_Tests.cs" />
-    <Compile Include="Codigos de Referencia_Tests\3 Con Objetos\CodigoDeReferenciaSinVerificador\ComoTexto_Tests.cs" />
-    <Compile Include="Codigos de Referencia_Tests\3 Con Objetos\CodigosDeReferencia_Tests\CodigosDeReferencia_Tests.cs" />
-    <Compile Include="Codigos de Referencia_Tests\3 Con Objetos\Dia\ComoTexto_Tests.cs" />
-    <Compile Include="Codigos de Referencia_Tests\3 Con Objetos\FechaComoTexto\ComoTexto_Tests.cs" />
-    <Compile Include="Codigos de Referencia_Tests\3 Con Objetos\Mes\ComoTexto_Tests.cs" />
-    <Compile Include="Impuesto_Tests\1 Procedimiento\Impuesto_Tests.cs" />
-    <Compile Include="Impuesto_Tests\3 Con Objetos\DiasAlVencimiento\DiasTotales_Tests.cs" />
-    <Compile Include="Impuesto_Tests\3 Con Objetos\ImpuestoConTratamientoFiscal_Tests\ImpuestoConTratamientoFiscal_Tests.cs" />
-    <Compile Include="Impuesto_Tests\3 Con Objetos\ImpuestoRedondeado\ImpuestoRedondeado_Tests.cs" />
-    <Compile Include="Impuesto_Tests\3 Con Objetos\Impuesto\Impuesto_Tests.cs" />
-    <Compile Include="Impuesto_Tests\3 Con Objetos\TasaBruta\ObtenerTasaBruta_Tests.cs" />
-    <Compile Include="Impuesto_Tests\3 Con Objetos\ValorTransadoBruto\ObtenerValorTransadoBruto_Tests.cs" />
-    <Compile Include="Impuesto_Tests\2 Con Funciones\Impuesto_Tests.cs" />
-    <Compile Include="Rendimiento Por Descuento_Tests\2 Con Funciones\RendimientoPorDescuento_Tests.cs" />
-    <Compile Include="Rendimiento Por Descuento_Tests\1 Procedimiento\RendimientoPorDescuento_Tests.cs" />
-    <Compile Include="Codigos de Referencia_Tests\2 Con Funciones\CodigosDeReferencia_Tests.cs" />
-    <Compile Include="Codigos de Referencia_Tests\1 Procedimiento\CodigosDeReferencia_Tests.cs" />
+    <Compile Include="Codigos de Referencia\4 Con Parameter Object\Año\ComoTexto_Tests.cs" />
+    <Compile Include="Codigos de Referencia\4 Con Parameter Object\CodigoDeReferenciaCompleto\ComoTexto_Tests.cs" />
+    <Compile Include="Codigos de Referencia\4 Con Parameter Object\CodigoDeReferenciaSinVerificador\ComoTexto_Tests.cs" />
+    <Compile Include="Codigos de Referencia\4 Con Parameter Object\CodigosDeReferencia_Tests\CodigosDeReferencia_Tests.cs" />
+    <Compile Include="Codigos de Referencia\4 Con Parameter Object\Dia\ComoTexto_Tests.cs" />
+    <Compile Include="Codigos de Referencia\4 Con Parameter Object\FechaComoTexto\ComoTexto_Tests.cs" />
+    <Compile Include="Codigos de Referencia\4 Con Parameter Object\Mes\ComoTexto_Tests.cs" />
+    <Compile Include="Codigos de Referencia\3 Con Objetos\Año\ComoTexto_Tests.cs" />
+    <Compile Include="Codigos de Referencia\3 Con Objetos\CodigoDeReferenciaCompleto\ComoTexto_Tests.cs" />
+    <Compile Include="Codigos de Referencia\3 Con Objetos\CodigoDeReferenciaSinVerificador\ComoTexto_Tests.cs" />
+    <Compile Include="Codigos de Referencia\3 Con Objetos\CodigosDeReferencia_Tests\CodigosDeReferencia_Tests.cs" />
+    <Compile Include="Codigos de Referencia\3 Con Objetos\Dia\ComoTexto_Tests.cs" />
+    <Compile Include="Codigos de Referencia\3 Con Objetos\FechaComoTexto\ComoTexto_Tests.cs" />
+    <Compile Include="Codigos de Referencia\3 Con Objetos\Mes\ComoTexto_Tests.cs" />
+    <Compile Include="Impuesto\1 Procedimiento\Impuesto_Tests.cs" />
+    <Compile Include="Impuesto\3 Con Objetos\DiasAlVencimiento\DiasTotales_Tests.cs" />
+    <Compile Include="Impuesto\3 Con Objetos\ImpuestoConTratamientoFiscal_Tests\ImpuestoConTratamientoFiscal_Tests.cs" />
+    <Compile Include="Impuesto\3 Con Objetos\ImpuestoRedondeado\ImpuestoRedondeado_Tests.cs" />
+    <Compile Include="Impuesto\3 Con Objetos\Impuesto\Impuesto_Tests.cs" />
+    <Compile Include="Impuesto\3 Con Objetos\TasaBruta\ObtenerTasaBruta_Tests.cs" />
+    <Compile Include="Impuesto\3 Con Objetos\ValorTransadoBruto\ObtenerValorTransadoBruto_Tests.cs" />
+    <Compile Include="Impuesto\2 Con Funciones\Impuesto_Tests.cs" />
+    <Compile Include="Rendimiento Por Descuento\2 Con Funciones\RendimientoPorDescuento_Tests.cs" />
+    <Compile Include="Rendimiento Por Descuento\1 Procedimiento\RendimientoPorDescuento_Tests.cs" />
+    <Compile Include="Codigos de Referencia\2 Con Funciones\CodigosDeReferencia_Tests.cs" />
+    <Compile Include="Codigos de Referencia\1 Procedimiento\CodigosDeReferencia_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rendimiento Por Descuento_Tests\3 Con Objetos\RendimientoPorDescuentoConTratamientoFiscal_Tests\RendimientoPorDescuentoConTratamientoFiscal_Tests.cs" />
-    <Compile Include="Rendimiento Por Descuento_Tests\3 Con Objetos\RendimientoPorDescuentoRedondeado\RendimientoPorDescuentoRedondeado_Tests.cs" />
-    <Compile Include="Rendimiento Por Descuento_Tests\3 Con Objetos\RendimientoPorDescuento\RendimientoPorDescuento_Tests.cs" />
-    <Compile Include="Rendimiento Por Descuento_Tests\3 Con Objetos\TasaBruta\ObtenerTasaBruta_Tests.cs" />
-    <Compile Include="Rendimiento Por Descuento_Tests\3 Con Objetos\ValorTransadoBruto\ObtenerValorTransadoBruto_Tests.cs" />
-    <Compile Include="Rendimiento Por Descuento_Tests\3 Con Objetos\DiasAlVencimiento\DiasTotales_Tests.cs" />
+    <Compile Include="Rendimiento Por Descuento\3 Con Objetos\RendimientoPorDescuentoConTratamientoFiscal_Tests\RendimientoPorDescuentoConTratamientoFiscal_Tests.cs" />
+    <Compile Include="Rendimiento Por Descuento\3 Con Objetos\RendimientoPorDescuentoRedondeado\RendimientoPorDescuentoRedondeado_Tests.cs" />
+    <Compile Include="Rendimiento Por Descuento\3 Con Objetos\RendimientoPorDescuento\RendimientoPorDescuento_Tests.cs" />
+    <Compile Include="Rendimiento Por Descuento\3 Con Objetos\TasaBruta\ObtenerTasaBruta_Tests.cs" />
+    <Compile Include="Rendimiento Por Descuento\3 Con Objetos\ValorTransadoBruto\ObtenerValorTransadoBruto_Tests.cs" />
+    <Compile Include="Rendimiento Por Descuento\3 Con Objetos\DiasAlVencimiento\DiasTotales_Tests.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

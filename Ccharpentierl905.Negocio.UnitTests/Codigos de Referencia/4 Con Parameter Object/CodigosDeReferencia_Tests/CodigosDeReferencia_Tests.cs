@@ -1,11 +1,11 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ConFunciones;
+using ConParameterObject;
 using System;
 
-namespace ConObjetos.CodigosDeReferencia_TESTS
+namespace ConParameterObject.CodigosDeReferencia_TESTS
 {
     [TestClass]
-    public class CodigosDeReferencia_ConObjetos_Tests
+    public class CodigosDeReferencia_ConParameterObject_Tests
     {
         private string elResultadoObtenido;
         private string elResultadoEsperado;
