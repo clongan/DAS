@@ -4,10 +4,9 @@ namespace ConParameterObject
 {
     public class CodigosDeReferencia
     {
-        public static string GenerarCodigoDeReferencia(DateTime fecha, string cliente,
-            string sistema, string consecutivo)
+        public static string GenerarCodigoDeReferencia(InformacionDelCodigoDeReferencia informacionDelCodigoDeReferencia)
         {
-            return new CodigoDeReferenciaCompleto(fecha, cliente, sistema, consecutivo).ObtenerCodigoDeReferencia();
+            return new CodigoDeReferenciaCompleto(informacionDelCodigoDeReferencia).ObtenerCodigoDeReferencia();
         }
 
     }

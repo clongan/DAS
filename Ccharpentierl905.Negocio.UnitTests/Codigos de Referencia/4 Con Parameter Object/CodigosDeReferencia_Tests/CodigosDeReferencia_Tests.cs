@@ -13,19 +13,20 @@ namespace ConParameterObject.CodigosDeReferencia_TESTS
         private string cliente;
         private string sistema;
         private string consecutivo;
+        private InformacionDelCodigoDeReferencia laInformacion;
 
         [TestMethod]
         public void GenerarCodigoDeReferencia_GeneraDosVerificadores_TruncaAUnDigito()
         {
             elResultadoEsperado = "20001111333228888888888881";
 
-            fecha = new DateTime(2000, 11, 11);
-            cliente = "333";
-            sistema = "22";
-            consecutivo = "888888888888";
+            laInformacion = new InformacionDelCodigoDeReferencia();
+            laInformacion.fecha = new DateTime(2000, 11, 11);
+            laInformacion.cliente = "333";
+            laInformacion.sistema = "22";
+            laInformacion.consecutivo = "888888888888";
 
-            elResultadoObtenido = CodigosDeReferencia.GenerarCodigoDeReferencia(fecha, cliente,
-                sistema, consecutivo);
+            elResultadoObtenido = CodigosDeReferencia.GenerarCodigoDeReferencia(laInformacion);
 
             Assert.AreEqual(elResultadoEsperado, elResultadoObtenido);
         }
@@ -35,12 +36,13 @@ namespace ConParameterObject.CodigosDeReferencia_TESTS
         {
             elResultadoEsperado = "20001111033228888888888885";
 
-            fecha = new DateTime(2000, 11, 11);
-            cliente = "33";
-            sistema = "22";
-            consecutivo = "888888888888";
-            elResultadoObtenido = CodigosDeReferencia.GenerarCodigoDeReferencia(fecha, cliente,
-                sistema, consecutivo);
+            laInformacion = new InformacionDelCodigoDeReferencia();
+            laInformacion.fecha = new DateTime(2000, 11, 11);
+            laInformacion.cliente = "33";
+            laInformacion.sistema = "22";
+            laInformacion.consecutivo = "888888888888";
+
+            elResultadoObtenido = CodigosDeReferencia.GenerarCodigoDeReferencia(laInformacion);
 
             Assert.AreEqual(elResultadoEsperado, elResultadoObtenido);
         }
@@ -49,13 +51,13 @@ namespace ConParameterObject.CodigosDeReferencia_TESTS
         public void GenerarCodigoDeReferencia_SistemaTieneSoloUnDigito_PrecedeConCero()
         {
             elResultadoEsperado = "20001111333028888888888884";
+            laInformacion = new InformacionDelCodigoDeReferencia();
+            laInformacion.fecha = new DateTime(2000, 11, 11);
+            laInformacion.cliente = "333";
+            laInformacion.sistema = "2";
+            laInformacion.consecutivo = "888888888888";
 
-            fecha = new DateTime(2000, 11, 11);
-            cliente = "333";
-            sistema = "2";
-            consecutivo = "888888888888";
-            elResultadoObtenido = CodigosDeReferencia.GenerarCodigoDeReferencia(fecha, cliente,
-                sistema, consecutivo);
+            elResultadoObtenido = CodigosDeReferencia.GenerarCodigoDeReferencia(laInformacion);
 
             Assert.AreEqual(elResultadoEsperado, elResultadoObtenido);
         }
@@ -64,13 +66,13 @@ namespace ConParameterObject.CodigosDeReferencia_TESTS
         public void GenerarCodigoDeReferencia_MesTieneSoloUnDigito_PrecedeConCero()
         {
             elResultadoEsperado = "20000111333228888888888885";
+            laInformacion = new InformacionDelCodigoDeReferencia();
+            laInformacion.fecha = new DateTime(2000, 1, 11);
+            laInformacion.cliente = "333";
+            laInformacion.sistema = "22";
+            laInformacion.consecutivo = "888888888888";
 
-            fecha = new DateTime(2000, 1, 11);
-            cliente = "333";
-            sistema = "22";
-            consecutivo = "888888888888";
-            elResultadoObtenido = CodigosDeReferencia.GenerarCodigoDeReferencia(fecha, cliente,
-                sistema, consecutivo);
+            elResultadoObtenido = CodigosDeReferencia.GenerarCodigoDeReferencia(laInformacion);
 
             Assert.AreEqual(elResultadoEsperado, elResultadoObtenido);
         }
@@ -80,12 +82,13 @@ namespace ConParameterObject.CodigosDeReferencia_TESTS
         {
             elResultadoEsperado = "20001101333228888888888883";
 
-            fecha = new DateTime(2000, 11, 1);
-            cliente = "333";
-            sistema = "22";
-            consecutivo = "888888888888";
-            elResultadoObtenido = CodigosDeReferencia.GenerarCodigoDeReferencia(fecha, cliente,
-                sistema, consecutivo);
+            laInformacion = new InformacionDelCodigoDeReferencia();
+            laInformacion.fecha = new DateTime(2000, 11, 1);
+            laInformacion.cliente = "333";
+            laInformacion.sistema = "22";
+            laInformacion.consecutivo = "888888888888";
+
+            elResultadoObtenido = CodigosDeReferencia.GenerarCodigoDeReferencia(laInformacion);
 
             Assert.AreEqual(elResultadoEsperado, elResultadoObtenido);
         }
@@ -95,12 +98,13 @@ namespace ConParameterObject.CodigosDeReferencia_TESTS
         {
             elResultadoEsperado = "20001111333220000000000047";
 
-            fecha = new DateTime(2000, 11, 11);
-            cliente = "333";
-            sistema = "22";
-            consecutivo = "4";
-            elResultadoObtenido = CodigosDeReferencia.GenerarCodigoDeReferencia(fecha, cliente,
-                sistema, consecutivo);
+            laInformacion = new InformacionDelCodigoDeReferencia();
+            laInformacion.fecha = new DateTime(2000, 11, 11);
+            laInformacion.cliente = "333";
+            laInformacion.sistema = "22";
+            laInformacion.consecutivo = "4";
+
+            elResultadoObtenido = CodigosDeReferencia.GenerarCodigoDeReferencia(laInformacion);
 
             Assert.AreEqual(elResultadoEsperado, elResultadoObtenido);
         }

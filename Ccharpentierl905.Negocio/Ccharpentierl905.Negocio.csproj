@@ -47,6 +47,7 @@
     <Compile Include="Codigos de Referencia\4 Con Parameter Object\CodigosDeReferencia.cs" />
     <Compile Include="Codigos de Referencia\4 Con Parameter Object\Dia.cs" />
     <Compile Include="Codigos de Referencia\4 Con Parameter Object\FechaComoTexto.cs" />
+    <Compile Include="Codigos de Referencia\4 Con Parameter Object\InformacionDelCodigoDeReferencia.cs" />
     <Compile Include="Codigos de Referencia\4 Con Parameter Object\Mes.cs" />
     <Compile Include="Codigos de Referencia\3 Con Objetos\CalculoDeDigitoVerificador.cs" />
     <Compile Include="Codigos de Referencia\2 Con Funciones\CalculoDeDigitoVerificador.cs" />

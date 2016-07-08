@@ -9,12 +9,12 @@ namespace ConParameterObject
         string sistemaFormateado;
         string consecutivoFormateado;
 
-        public CodigoDeReferenciaSinVerificador(DateTime fecha, string cliente, string sistema, string consecutivo)
+        public CodigoDeReferenciaSinVerificador(InformacionDelCodigoDeReferencia laInformacionDelCodigo)
         {
-            fechaCompletaComoTexto = ObtenerFechaCompletaComoTexto(fecha);
-            clienteFormateado = ObtenerClienteFormateado(cliente);
-            sistemaFormateado = ObtenerSistemaFormateado(sistema);
-            consecutivoFormateado = ObtenerConsecutivoFormateado(consecutivo);
+            fechaCompletaComoTexto = ObtenerFechaCompletaComoTexto(laInformacionDelCodigo.fecha);
+            clienteFormateado = ObtenerClienteFormateado(laInformacionDelCodigo.cliente);
+            sistemaFormateado = ObtenerSistemaFormateado(laInformacionDelCodigo.sistema);
+            consecutivoFormateado = ObtenerConsecutivoFormateado(laInformacionDelCodigo.consecutivo);
         }
 
         private string ObtenerFechaCompletaComoTexto(DateTime fecha)

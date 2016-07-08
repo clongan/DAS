@@ -9,12 +9,18 @@ namespace ConParameterObject_Tests
     {
         private object elResultadoEsperado;
         private object elResultadoObtenido;
+        private InformacionDelCodigoDeReferencia laInformacionDelCodigoDeReferencia;
 
         [TestMethod]
         public void ComoTexto_GeneraCodigoDeReferenciaSinVerificador()
         {
             elResultadoEsperado = "2000111133322888888888888";
-            elResultadoObtenido = new CodigoDeReferenciaSinVerificador(new DateTime(2000, 11, 11), "333", "22", "888888888888").ComoTexto();
+            laInformacionDelCodigoDeReferencia = new InformacionDelCodigoDeReferencia();
+            laInformacionDelCodigoDeReferencia.fecha = new DateTime(2000, 11, 11);
+            laInformacionDelCodigoDeReferencia.cliente = "333";
+            laInformacionDelCodigoDeReferencia.sistema = "22";
+            laInformacionDelCodigoDeReferencia.consecutivo = "888888888888";
+            elResultadoObtenido = new CodigoDeReferenciaSinVerificador(laInformacionDelCodigoDeReferencia).ComoTexto();
             Assert.AreEqual(elResultadoEsperado, elResultadoObtenido);
         }
     }

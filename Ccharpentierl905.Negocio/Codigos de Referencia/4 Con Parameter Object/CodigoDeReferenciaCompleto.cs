@@ -8,17 +8,15 @@ namespace ConParameterObject
         string codigoDeReferenciaSinVerificador;
         int verificador;
 
-        public CodigoDeReferenciaCompleto(DateTime fecha, string cliente,
-            string sistema, string consecutivo)
+        public CodigoDeReferenciaCompleto(InformacionDelCodigoDeReferencia laInformacionDelCodigo)
         {
-            codigoDeReferenciaSinVerificador = ObtenerCodigoDeReferenciaSinVerificador(fecha, cliente, sistema, consecutivo);
+            codigoDeReferenciaSinVerificador = ObtenerCodigoDeReferenciaSinVerificador(laInformacionDelCodigo);
             verificador = ObtenerElDigitoVerificador(codigoDeReferenciaSinVerificador);
         }
 
-        private string ObtenerCodigoDeReferenciaSinVerificador(DateTime fecha, string cliente,
-            string sistema, string consecutivo)
+        private string ObtenerCodigoDeReferenciaSinVerificador(InformacionDelCodigoDeReferencia laInformacionDelCodigo)
         {
-            return new CodigoDeReferenciaSinVerificador(fecha, cliente, sistema, consecutivo).ComoTexto();
+            return new CodigoDeReferenciaSinVerificador(laInformacionDelCodigo).ComoTexto();
         }
 
         private int ObtenerElDigitoVerificador(string codigoDeReferenciaSinVerificador)
