@@ -5,7 +5,7 @@ using ConObjetos;
 namespace ConObjetos_TESTS
 {
     [TestClass]
-    public class Impuesto_ValorTransadoBruto_Tests
+    public class ConObjetos_Impuesto_ValorTransadoBruto_Tests
     {
         private object elResultadoEsperado;
         private double elResultadoObtenido;

@@ -5,7 +5,7 @@ using System;
 namespace ConFunciones_TESTS
 {
     [TestClass]
-    public class CodigosDeReferencia_ConFunciones_Tests
+    public class ConFunciones_CodigosDeReferencia_Tests
     {
         private string elResultadoObtenido;
         private string elResultadoEsperado;

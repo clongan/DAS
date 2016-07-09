@@ -5,7 +5,7 @@ using ConObjetos;
 namespace ConObjetos_Tests
 {
     [TestClass]
-    public class Impuesto_ImpuestoConTratamientoFiscal_Test
+    public class ConObjetos_Impuesto_ImpuestoConTratamientoFiscal_Test
     {
         private double elResultadoObtenido;
         private double elResultadoEsperado;

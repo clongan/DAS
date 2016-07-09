@@ -5,7 +5,7 @@ using ConObjetos;
 namespace ConObjetos_Tests
 {
     [TestClass]
-    public class TasaBruta_Tests
+    public class ConObjetos_TasaBruta_Tests
     {
         private double elResultadoEsperado;
         private double elResultadoObtenido;

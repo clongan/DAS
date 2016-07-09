@@ -4,7 +4,7 @@ using System;
 namespace ConObjetos.CodigosDeReferencia_TESTS
 {
     [TestClass]
-    public class CodigosDeReferencia_ConObjetos_Tests
+    public class ConObjetos_CodigosDeReferencia_Tests
     {
         private string elResultadoObtenido;
         private string elResultadoEsperado;

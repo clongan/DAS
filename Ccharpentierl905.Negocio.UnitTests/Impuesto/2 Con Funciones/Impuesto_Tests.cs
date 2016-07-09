@@ -5,7 +5,7 @@ using System;
 namespace ConFunciones_TESTS
 {
     [TestClass]
-    public class Impuesto_ConFunciones_Tests
+    public class ConFunciones_Impuesto_Tests
     {
         private double elResultadoObtenido;
         private double elResultadoEsperado;

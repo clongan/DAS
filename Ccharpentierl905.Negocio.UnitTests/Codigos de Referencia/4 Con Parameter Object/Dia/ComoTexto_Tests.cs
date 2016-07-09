@@ -5,7 +5,7 @@ using ConParameterObject;
 namespace ConParameterObject_Tests
 {
     [TestClass]
-    public class CodigosDeReferencia_ConParameterObject_Dia_Tests
+    public class ConParameterObject_CodigosDeReferencia_Dia_Tests
     {
         private string elResultadoEsperado;
         private string elResultadoObtenido;

@@ -5,7 +5,7 @@ using ConObjetos;
 namespace ConObjetos_Tests
 {
     [TestClass]
-    public class CodigosDeReferencia_ConObjetos_CodigoDeReferenciaCompleto_Tests
+    public class ConObjetos_CodigosDeReferencia_CodigoDeReferenciaCompleto_Tests
     {
         private object elResultadoEsperado;
         private object elResultadoObtenido;

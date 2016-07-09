@@ -5,7 +5,7 @@ using ConParameterObject;
 namespace ConParameterObject_Tests
 {
     [TestClass]
-    public class CodigosDeReferencia_ConParameterObject_CodigoDeReferenciaCompleto_Tests
+    public class ConParameterObject_CodigosDeReferencia_CodigoDeReferenciaCompleto_Tests
     {
         private object elResultadoEsperado;
         private object elResultadoObtenido;

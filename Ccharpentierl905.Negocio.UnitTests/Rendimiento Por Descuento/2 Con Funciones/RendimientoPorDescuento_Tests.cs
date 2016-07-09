@@ -5,7 +5,7 @@ using System;
 namespace ConFunciones_TESTS
 {
     [TestClass]
-    public class RendimientoPorDescuento_ConFunciones_Tests
+    public class ConFunciones_RendimientoPorDescuento_Tests
     {
         private double elResultadoObtenido;
         private double elResultadoEsperado;

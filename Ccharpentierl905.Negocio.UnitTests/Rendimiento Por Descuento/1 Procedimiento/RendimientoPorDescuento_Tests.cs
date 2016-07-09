@@ -5,7 +5,7 @@ using System;
 namespace ComoUnProcedimiento_TESTS
 {
     [TestClass]
-    public class RendimientoPorDescuento_ComoUnProcedimiento_Tests
+    public class ComoUnProcedimiento_RendimientoPorDescuento_Tests
     {
         private double elResultadoObtenido;
         private double elResultadoEsperado;

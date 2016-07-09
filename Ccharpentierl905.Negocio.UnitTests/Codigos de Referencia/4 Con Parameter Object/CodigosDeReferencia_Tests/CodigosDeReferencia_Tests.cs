@@ -5,14 +5,10 @@ using System;
 namespace ConParameterObject.CodigosDeReferencia_TESTS
 {
     [TestClass]
-    public class CodigosDeReferencia_ConParameterObject_Tests
+    public class ConParameterObject_CodigosDeReferencia_Tests
     {
         private string elResultadoObtenido;
         private string elResultadoEsperado;
-        private DateTime fecha;
-        private string cliente;
-        private string sistema;
-        private string consecutivo;
         private InformacionDelCodigoDeReferencia laInformacion;
 
         [TestMethod]

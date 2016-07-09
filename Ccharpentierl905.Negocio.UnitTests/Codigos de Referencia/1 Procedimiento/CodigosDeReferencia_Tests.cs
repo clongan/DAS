@@ -5,7 +5,7 @@ using System;
 namespace ComoUnProcedimiento_TESTS
 {
     [TestClass]
-    public class CodigosDeReferencia_ComoUnProcedimiento_Tests
+    public class ComoUnProcedimiento_CodigosDeReferencia_Tests
     {
         private string elResultadoObtenido;
         private string elResultadoEsperado;
