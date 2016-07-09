@@ -17,6 +17,5 @@ namespace ConParameterObject_Tests
             elResultadoObtenido = new Mes(new DateTime(2016, 10, 10)).ComoTexto();
             Assert.AreEqual(elResultadoEsperado, elResultadoObtenido);
         }
-
     }
 }

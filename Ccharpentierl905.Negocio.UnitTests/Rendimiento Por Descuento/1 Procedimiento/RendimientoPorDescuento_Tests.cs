@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Ccharpentierl905.Negocio.ComoUnProcedimiento.RendimientoPorDescuento;
+using ComoUnProcedimiento;
 using System;
 
 namespace ComoUnProcedimiento_TESTS
