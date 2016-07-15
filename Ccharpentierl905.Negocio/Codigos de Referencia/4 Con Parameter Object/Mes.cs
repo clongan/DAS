@@ -6,14 +6,15 @@ namespace ConParameterObject
     {
         private int mes;
 
-        public Mes(DateTime fecha)
+        public Mes(InformacionDelCodigoDeReferencia laInformacionDelCodigo)
         {
-            mes = ObtenerMesDeFechaCompleta(fecha);
+            mes = ObtenerMesDeFechaCompleta(laInformacionDelCodigo);
         }
 
-        private int ObtenerMesDeFechaCompleta(DateTime fecha)
+        private int ObtenerMesDeFechaCompleta(InformacionDelCodigoDeReferencia laInformacionDelCodigo)
         {
-            return fecha.Month;
+            // TODO: 2 PUNTOS
+            return laInformacionDelCodigo.fecha.Month;
         }
 
         public string ComoTexto()

@@ -6,14 +6,15 @@ namespace ConParameterObject
     {
         private int dia;
 
-        public Dia(DateTime fecha)
+        public Dia(InformacionDelCodigoDeReferencia laInformacionDelCodigo)
         {
-            dia = ObtenerDiaDeFechaCompleta(fecha);
+            dia = ObtenerDiaDeFechaCompleta(laInformacionDelCodigo);
         }
 
-        public int ObtenerDiaDeFechaCompleta(DateTime fecha)
+        public int ObtenerDiaDeFechaCompleta(InformacionDelCodigoDeReferencia laInformacionDelCodigo)
         {
-            return fecha.Day;
+            // TODO: 2 PUNTOS
+            return laInformacionDelCodigo.fecha.Day;
         }
 
         public string ComoTexto()

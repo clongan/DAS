@@ -8,26 +8,26 @@ namespace ConParameterObject
         string mes;
         string año;
 
-        public FechaComoTexto(DateTime fecha)
+        public FechaComoTexto(InformacionDelCodigoDeReferencia laInformacionDelCodigo)
         {
-            dia = ObtenerDiaDeFechaCompleta(fecha);
-            mes = ObtenerMesDeFechaCompleta(fecha);
-            año = ObtenerAñoDeFechaCompleta(fecha);
+            dia = ObtenerDiaDeFechaCompleta(laInformacionDelCodigo);
+            mes = ObtenerMesDeFechaCompleta(laInformacionDelCodigo);
+            año = ObtenerAñoDeFechaCompleta(laInformacionDelCodigo);
         }
 
-        private string ObtenerDiaDeFechaCompleta(DateTime fecha)
+        private string ObtenerDiaDeFechaCompleta(InformacionDelCodigoDeReferencia laInformacionDelCodigo)
         {
-            return new Dia(fecha).ComoTexto();
+            return new Dia(laInformacionDelCodigo).ComoTexto();
         }
 
-        private string ObtenerMesDeFechaCompleta(DateTime fecha)
+        private string ObtenerMesDeFechaCompleta(InformacionDelCodigoDeReferencia laInformacionDelCodigo)
         {
-            return new Mes(fecha).ComoTexto();
+            return new Mes(laInformacionDelCodigo).ComoTexto();
         }
 
-        private string ObtenerAñoDeFechaCompleta(DateTime fecha)
+        private string ObtenerAñoDeFechaCompleta(InformacionDelCodigoDeReferencia laInformacionDelCodigo)
         {
-            return new Año(fecha).ComoTexto();
+            return new Año(laInformacionDelCodigo).ComoTexto();
         }
 
         public string ComoTexto()

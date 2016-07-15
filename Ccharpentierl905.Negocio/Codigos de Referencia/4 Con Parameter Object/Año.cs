@@ -6,14 +6,15 @@ namespace ConParameterObject
     {
         private int año;
 
-        public Año(DateTime fecha)
+        public Año(InformacionDelCodigoDeReferencia laInformacionDelCodigo)
         {
-            año = ObtenerAñoDeFechaCompleta(fecha);
+            año = ObtenerAñoDeFechaCompleta(laInformacionDelCodigo);
         }
 
-        private int ObtenerAñoDeFechaCompleta(DateTime fecha)
+        private int ObtenerAñoDeFechaCompleta(InformacionDelCodigoDeReferencia laInformacionDelCodigo)
         {
-            return fecha.Year;
+            // TODO: 2 PUNTOS
+            return laInformacionDelCodigo.fecha.Year;
         }
 
         public string ComoTexto()

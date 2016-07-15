@@ -9,12 +9,15 @@ namespace ConParameterObject_Tests
     {
         private string elResultadoEsperado;
         private string elResultadoObtenido;
+        private InformacionDelCodigoDeReferencia laInformacionDelCodigo;
 
         [TestMethod]
         public void ComoTexto_UnaFecha_GeneraElAño()
         {
             elResultadoEsperado = "2016";
-            elResultadoObtenido = new Año(new DateTime(2016, 10, 10)).ComoTexto();
+            laInformacionDelCodigo = new InformacionDelCodigoDeReferencia();
+            laInformacionDelCodigo.fecha = new DateTime(2016, 10, 10);
+            elResultadoObtenido = new Año(laInformacionDelCodigo).ComoTexto();
             Assert.AreEqual(elResultadoEsperado, elResultadoObtenido);
         }
 
