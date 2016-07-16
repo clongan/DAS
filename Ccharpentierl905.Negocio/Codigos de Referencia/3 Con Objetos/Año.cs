@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ConObjetos
+namespace CodigosDeReferencia.ConObjetos
 {
     public class Año
     {

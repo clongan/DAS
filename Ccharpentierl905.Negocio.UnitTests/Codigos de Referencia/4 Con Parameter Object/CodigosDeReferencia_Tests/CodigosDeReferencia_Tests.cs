@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ConParameterObject;
+using CodigosDeReferencia.ConParameterObject;
 using System;
 
 namespace ConParameterObject.CodigosDeReferencia_TESTS
@@ -22,7 +22,7 @@ namespace ConParameterObject.CodigosDeReferencia_TESTS
             laInformacion.sistema = "22";
             laInformacion.consecutivo = "888888888888";
 
-            elResultadoObtenido = CodigosDeReferencia.GenerarCodigoDeReferencia(laInformacion);
+            elResultadoObtenido = CalculosDeCodigosDeReferencia.GenerarCodigoDeReferencia(laInformacion);
 
             Assert.AreEqual(elResultadoEsperado, elResultadoObtenido);
         }
@@ -38,7 +38,7 @@ namespace ConParameterObject.CodigosDeReferencia_TESTS
             laInformacion.sistema = "22";
             laInformacion.consecutivo = "888888888888";
 
-            elResultadoObtenido = CodigosDeReferencia.GenerarCodigoDeReferencia(laInformacion);
+            elResultadoObtenido = CalculosDeCodigosDeReferencia.GenerarCodigoDeReferencia(laInformacion);
 
             Assert.AreEqual(elResultadoEsperado, elResultadoObtenido);
         }
@@ -53,7 +53,7 @@ namespace ConParameterObject.CodigosDeReferencia_TESTS
             laInformacion.sistema = "2";
             laInformacion.consecutivo = "888888888888";
 
-            elResultadoObtenido = CodigosDeReferencia.GenerarCodigoDeReferencia(laInformacion);
+            elResultadoObtenido = CalculosDeCodigosDeReferencia.GenerarCodigoDeReferencia(laInformacion);
 
             Assert.AreEqual(elResultadoEsperado, elResultadoObtenido);
         }
@@ -68,7 +68,7 @@ namespace ConParameterObject.CodigosDeReferencia_TESTS
             laInformacion.sistema = "22";
             laInformacion.consecutivo = "888888888888";
 
-            elResultadoObtenido = CodigosDeReferencia.GenerarCodigoDeReferencia(laInformacion);
+            elResultadoObtenido = CalculosDeCodigosDeReferencia.GenerarCodigoDeReferencia(laInformacion);
 
             Assert.AreEqual(elResultadoEsperado, elResultadoObtenido);
         }
@@ -84,7 +84,7 @@ namespace ConParameterObject.CodigosDeReferencia_TESTS
             laInformacion.sistema = "22";
             laInformacion.consecutivo = "888888888888";
 
-            elResultadoObtenido = CodigosDeReferencia.GenerarCodigoDeReferencia(laInformacion);
+            elResultadoObtenido = CalculosDeCodigosDeReferencia.GenerarCodigoDeReferencia(laInformacion);
 
             Assert.AreEqual(elResultadoEsperado, elResultadoObtenido);
         }
@@ -100,7 +100,7 @@ namespace ConParameterObject.CodigosDeReferencia_TESTS
             laInformacion.sistema = "22";
             laInformacion.consecutivo = "4";
 
-            elResultadoObtenido = CodigosDeReferencia.GenerarCodigoDeReferencia(laInformacion);
+            elResultadoObtenido = CalculosDeCodigosDeReferencia.GenerarCodigoDeReferencia(laInformacion);
 
             Assert.AreEqual(elResultadoEsperado, elResultadoObtenido);
         }

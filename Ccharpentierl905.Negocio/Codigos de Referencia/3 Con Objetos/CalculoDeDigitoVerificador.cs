@@ -1,4 +1,4 @@
-﻿namespace Ccharpentierl905.Negocio.ConObjetos.Calculos
+﻿namespace ConObjetos.Calculos
 {
     public static class CalculoDeDigitoVerificador
     {

@@ -1,20 +1,20 @@
 ﻿using System;
 
-namespace ConParameterObject
+namespace CodigosDeReferencia.ConParameterObject
 {
     public class Año
     {
         private int año;
 
-        public Año(InformacionDelCodigoDeReferencia laInformacionDelCodigo)
+        public Año(InformacionDelCodigoDeReferencia laInformacion)
         {
-            año = ObtenerAñoDeFechaCompleta(laInformacionDelCodigo);
+            año = ObtenerAñoDeFechaCompleta(laInformacion);
         }
 
-        private int ObtenerAñoDeFechaCompleta(InformacionDelCodigoDeReferencia laInformacionDelCodigo)
+        private int ObtenerAñoDeFechaCompleta(InformacionDelCodigoDeReferencia laInformacion)
         {
             // TODO: 2 PUNTOS
-            return laInformacionDelCodigo.fecha.Year;
+            return laInformacion.fecha.Year;
         }
 
         public string ComoTexto()

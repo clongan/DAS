@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace ConObjetos
+namespace CodigosDeReferencia.ConObjetos
 {
-    public class CodigosDeReferencia
+    public class CalculosDeCodigosDeReferencia
     {
         public static string GenerarCodigoDeReferencia(DateTime fecha, string cliente,
             string sistema, string consecutivo)

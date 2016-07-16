@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ConFunciones;
+using Impuestos.ConFunciones;
 using System;
 
 namespace ConFunciones_TESTS

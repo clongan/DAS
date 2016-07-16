@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ComoUnProcedimiento
+namespace RendimientosPorDescuento.ComoUnProcedimiento
 {
     public class RendimientoPorDescuento
     {

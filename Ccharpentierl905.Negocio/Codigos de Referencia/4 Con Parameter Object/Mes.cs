@@ -1,25 +1,23 @@
-﻿using System;
-
-namespace ConParameterObject
+﻿namespace CodigosDeReferencia.ConParameterObject
 {
     public class Mes
     {
         private int mes;
 
-        public Mes(InformacionDelCodigoDeReferencia laInformacionDelCodigo)
+        public Mes(InformacionDelCodigoDeReferencia laInformacion)
         {
-            mes = ObtenerMesDeFechaCompleta(laInformacionDelCodigo);
+            mes = ObtenerMesDeFechaCompleta(laInformacion);
         }
 
-        private int ObtenerMesDeFechaCompleta(InformacionDelCodigoDeReferencia laInformacionDelCodigo)
+        public int ObtenerMesDeFechaCompleta(InformacionDelCodigoDeReferencia laInformacion)
         {
             // TODO: 2 PUNTOS
-            return laInformacionDelCodigo.fecha.Month;
+            return laInformacion.fecha.Month;
         }
 
         public string ComoTexto()
         {
-            return mes.ToString().PadLeft(2, '0');
+            return new MesComoTexto(mes).ComoTexto();
         }
     }
 }

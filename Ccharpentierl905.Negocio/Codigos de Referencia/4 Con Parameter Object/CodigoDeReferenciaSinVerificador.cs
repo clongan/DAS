@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ConParameterObject
+﻿namespace CodigosDeReferencia.ConParameterObject
 {
     public class CodigoDeReferenciaSinVerificador
     {
@@ -9,35 +7,35 @@ namespace ConParameterObject
         string sistemaFormateado;
         string consecutivoFormateado;
 
-        public CodigoDeReferenciaSinVerificador(InformacionDelCodigoDeReferencia laInformacionDelCodigo)
+        public CodigoDeReferenciaSinVerificador(InformacionDelCodigoDeReferencia laInformacion)
         {
-            fechaCompletaComoTexto = ObtenerFechaCompletaComoTexto(laInformacionDelCodigo);
-            clienteFormateado = ObtenerClienteFormateado(laInformacionDelCodigo);
-            sistemaFormateado = ObtenerSistemaFormateado(laInformacionDelCodigo);
-            consecutivoFormateado = ObtenerConsecutivoFormateado(laInformacionDelCodigo);
+            fechaCompletaComoTexto = ObtenerFechaCompletaComoTexto(laInformacion);
+            clienteFormateado = ObtenerClienteFormateado(laInformacion);
+            sistemaFormateado = ObtenerSistemaFormateado(laInformacion);
+            consecutivoFormateado = ObtenerConsecutivoFormateado(laInformacion);
         }
 
-        private string ObtenerFechaCompletaComoTexto(InformacionDelCodigoDeReferencia laInformacionDelCodigo)
+        private string ObtenerFechaCompletaComoTexto(InformacionDelCodigoDeReferencia laInformacion)
         {
-            return new FechaComoTexto(laInformacionDelCodigo).ComoTexto();
+            return new FechaComoTexto(laInformacion).ComoTexto();
         }
 
-        private string ObtenerClienteFormateado(InformacionDelCodigoDeReferencia laInformacionDelCodigo)
+        private string ObtenerClienteFormateado(InformacionDelCodigoDeReferencia laInformacion)
         {
-            // TODO: 2 PUNTOS
-            return laInformacionDelCodigo.cliente.PadLeft(3, '0');
+            // TODO: 2 PUNTOS 
+            return laInformacion.cliente.PadLeft(3, '0');
         }
 
-        private string ObtenerSistemaFormateado(InformacionDelCodigoDeReferencia laInformacionDelCodigo)
+        private string ObtenerSistemaFormateado(InformacionDelCodigoDeReferencia laInformacion)
         {
-            // TODO: 2 PUNTOS
-            return laInformacionDelCodigo.sistema.PadLeft(2, '0');
+            // TODO: 2 PUNTOS 
+            return laInformacion.sistema.PadLeft(2, '0');
         }
 
-        private string ObtenerConsecutivoFormateado(InformacionDelCodigoDeReferencia laInformacionDelCodigo)
+        private string ObtenerConsecutivoFormateado(InformacionDelCodigoDeReferencia laInformacion)
         {
-            // TODO: 2 PUNTOS
-            return laInformacionDelCodigo.consecutivo.PadLeft(12, '0');
+            // TODO: 2 PUNTOS 
+            return laInformacion.consecutivo.PadLeft(12, '0');
         }
 
         public string ComoTexto()

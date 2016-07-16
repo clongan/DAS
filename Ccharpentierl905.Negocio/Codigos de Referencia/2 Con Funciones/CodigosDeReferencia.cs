@@ -1,9 +1,9 @@
 ﻿using System;
-using Ccharpentierl905.Negocio.ConFunciones.Calculos;
+using ConFunciones.Calculos;
 
-namespace ConFunciones
+namespace CodigosDeReferencia.ConFunciones
 {
-    public class CodigosDeReferencia
+    public class CalculosDeCodigosDeReferencia
     {
         public static string GenerarCodigoDeReferencia(DateTime fecha, string cliente,
             string sistema, string consecutivo)

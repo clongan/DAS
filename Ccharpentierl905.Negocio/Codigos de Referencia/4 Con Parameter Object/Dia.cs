@@ -1,26 +1,23 @@
-﻿using System;
-
-namespace ConParameterObject
+﻿namespace CodigosDeReferencia.ConParameterObject
 {
     public class Dia
     {
         private int dia;
 
-        public Dia(InformacionDelCodigoDeReferencia laInformacionDelCodigo)
+        public Dia(InformacionDelCodigoDeReferencia laInformacion)
         {
-            dia = ObtenerDiaDeFechaCompleta(laInformacionDelCodigo);
+            dia = ObtenerDiaDeFechaCompleta(laInformacion);
         }
 
-        public int ObtenerDiaDeFechaCompleta(InformacionDelCodigoDeReferencia laInformacionDelCodigo)
+        public int ObtenerDiaDeFechaCompleta(InformacionDelCodigoDeReferencia laInformacion)
         {
-            // TODO: 2 PUNTOS
-            return laInformacionDelCodigo.fecha.Day;
+            // TODO: 2 PUNTOS 
+            return laInformacion.fecha.Day;
         }
 
         public string ComoTexto()
         {
-            return dia.ToString().PadLeft(2, '0');
+            return new DiaComoTexto(dia).ComoTexto();
         }
-
     }
 }

@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ConObjetos
+namespace CodigosDeReferencia.ConObjetos
 {
     public class Mes
     {
@@ -15,14 +11,14 @@ namespace ConObjetos
             mes = ObtenerMesDeFechaCompleta(fecha);
         }
 
-        private int ObtenerMesDeFechaCompleta(DateTime fecha)
+        public int ObtenerMesDeFechaCompleta(DateTime fecha)
         {
             return fecha.Month;
         }
 
         public string ComoTexto()
         {
-            return mes.ToString().PadLeft(2, '0');
+            return new MesComoTexto(mes).ComoTexto();
         }
     }
 }

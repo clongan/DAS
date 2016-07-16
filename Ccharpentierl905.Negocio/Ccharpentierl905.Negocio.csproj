@@ -46,9 +46,12 @@
     <Compile Include="Codigos de Referencia\4 Con Parameter Object\CodigoDeReferenciaSinVerificador.cs" />
     <Compile Include="Codigos de Referencia\4 Con Parameter Object\CodigosDeReferencia.cs" />
     <Compile Include="Codigos de Referencia\4 Con Parameter Object\Dia.cs" />
+    <Compile Include="Codigos de Referencia\4 Con Parameter Object\DiaComoTexto.cs" />
     <Compile Include="Codigos de Referencia\4 Con Parameter Object\FechaComoTexto.cs" />
-    <Compile Include="Codigos de Referencia\4 Con Parameter Object\InformacionDelCodigoDeReferencia.cs" />
     <Compile Include="Codigos de Referencia\4 Con Parameter Object\Mes.cs" />
+    <Compile Include="Codigos de Referencia\4 Con Parameter Object\MesComoTexto.cs" />
+    <Compile Include="Codigos de Referencia\3 Con Objetos\MesComoTexto.cs" />
+    <Compile Include="Codigos de Referencia\3 Con Objetos\DiaComoTexto.cs" />
     <Compile Include="Codigos de Referencia\3 Con Objetos\CalculoDeDigitoVerificador.cs" />
     <Compile Include="Codigos de Referencia\2 Con Funciones\CalculoDeDigitoVerificador.cs" />
     <Compile Include="Codigos de Referencia\2 Con Funciones\CodigosDeReferencia.cs" />
@@ -61,6 +64,7 @@
     <Compile Include="Codigos de Referencia\3 Con Objetos\FechaComoTexto.cs" />
     <Compile Include="Codigos de Referencia\3 Con Objetos\Mes.cs" />
     <Compile Include="Codigos de Referencia\3 Con Objetos\Dia.cs" />
+    <Compile Include="Codigos de Referencia\4 Con Parameter Object\InformacionDelCodigoDeReferencia.cs" />
     <Compile Include="Impuesto\2 Con Funciones\Impuesto.cs" />
     <Compile Include="Impuesto\1 Procedimiento\Impuesto.cs" />
     <Compile Include="Impuesto\3 ConObjetos\Impuesto.cs" />

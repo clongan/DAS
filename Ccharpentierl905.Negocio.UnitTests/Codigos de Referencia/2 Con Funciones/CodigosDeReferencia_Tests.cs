@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ConFunciones;
+using CodigosDeReferencia.ConFunciones;
 using System;
 
 namespace ConFunciones_TESTS
@@ -24,7 +24,7 @@ namespace ConFunciones_TESTS
             sistema = "22";
             consecutivo = "888888888888";
 
-            elResultadoObtenido = CodigosDeReferencia.GenerarCodigoDeReferencia(fecha, cliente,
+            elResultadoObtenido = CalculosDeCodigosDeReferencia.GenerarCodigoDeReferencia(fecha, cliente,
                 sistema, consecutivo);
 
             Assert.AreEqual(elResultadoEsperado, elResultadoObtenido);
@@ -39,7 +39,7 @@ namespace ConFunciones_TESTS
             cliente = "33";
             sistema = "22";
             consecutivo = "888888888888";
-            elResultadoObtenido = CodigosDeReferencia.GenerarCodigoDeReferencia(fecha, cliente,
+            elResultadoObtenido = CalculosDeCodigosDeReferencia.GenerarCodigoDeReferencia(fecha, cliente,
                 sistema, consecutivo);
 
             Assert.AreEqual(elResultadoEsperado, elResultadoObtenido);
@@ -54,7 +54,7 @@ namespace ConFunciones_TESTS
             cliente = "333";
             sistema = "2";
             consecutivo = "888888888888";
-            elResultadoObtenido = CodigosDeReferencia.GenerarCodigoDeReferencia(fecha, cliente,
+            elResultadoObtenido = CalculosDeCodigosDeReferencia.GenerarCodigoDeReferencia(fecha, cliente,
                 sistema, consecutivo);
 
             Assert.AreEqual(elResultadoEsperado, elResultadoObtenido);
@@ -69,7 +69,7 @@ namespace ConFunciones_TESTS
             cliente = "333";
             sistema = "22";
             consecutivo = "888888888888";
-            elResultadoObtenido = CodigosDeReferencia.GenerarCodigoDeReferencia(fecha, cliente,
+            elResultadoObtenido = CalculosDeCodigosDeReferencia.GenerarCodigoDeReferencia(fecha, cliente,
                 sistema, consecutivo);
 
             Assert.AreEqual(elResultadoEsperado, elResultadoObtenido);
@@ -84,7 +84,7 @@ namespace ConFunciones_TESTS
             cliente = "333";
             sistema = "22";
             consecutivo = "888888888888";
-            elResultadoObtenido = CodigosDeReferencia.GenerarCodigoDeReferencia(fecha, cliente,
+            elResultadoObtenido = CalculosDeCodigosDeReferencia.GenerarCodigoDeReferencia(fecha, cliente,
                 sistema, consecutivo);
 
             Assert.AreEqual(elResultadoEsperado, elResultadoObtenido);
@@ -99,7 +99,7 @@ namespace ConFunciones_TESTS
             cliente = "333";
             sistema = "22";
             consecutivo = "4";
-            elResultadoObtenido = CodigosDeReferencia.GenerarCodigoDeReferencia(fecha, cliente,
+            elResultadoObtenido = CalculosDeCodigosDeReferencia.GenerarCodigoDeReferencia(fecha, cliente,
                 sistema, consecutivo);
 
             Assert.AreEqual(elResultadoEsperado, elResultadoObtenido);

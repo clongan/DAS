@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ConObjetos
+namespace Impuestos.ConObjetos
 {
     public class ImpuestoRedondeado
     {

@@ -1,9 +1,9 @@
 ﻿using System;
-using Ccharpentierl905.Negocio.ComoUnProcedimiento.Calculos;
+using ComoUnProcedimiento.Calculos;
 
-namespace ComoUnProcedimiento
+namespace CodigosDeReferencia.ComoUnProcedimiento
 {
-    public class CodigosDeReferencia
+    public class CalculosDeCodigosDeReferencia
     {
         public static string GenerarCodigoDeReferencia (DateTime fecha, string cliente, 
             string sistema, string consecutivo)

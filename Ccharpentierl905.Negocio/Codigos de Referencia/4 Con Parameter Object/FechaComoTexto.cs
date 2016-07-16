@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ConParameterObject
+﻿namespace CodigosDeReferencia.ConParameterObject
 {
     public class FechaComoTexto
     {
@@ -8,26 +6,26 @@ namespace ConParameterObject
         string mes;
         string año;
 
-        public FechaComoTexto(InformacionDelCodigoDeReferencia laInformacionDelCodigo)
+        public FechaComoTexto(InformacionDelCodigoDeReferencia laInformacion)
         {
-            dia = ObtenerDiaDeFechaCompleta(laInformacionDelCodigo);
-            mes = ObtenerMesDeFechaCompleta(laInformacionDelCodigo);
-            año = ObtenerAñoDeFechaCompleta(laInformacionDelCodigo);
+            dia = ObtenerDiaDeFechaCompleta(laInformacion);
+            mes = ObtenerMesDeFechaCompleta(laInformacion);
+            año = ObtenerAñoDeFechaCompleta(laInformacion);
         }
 
-        private string ObtenerDiaDeFechaCompleta(InformacionDelCodigoDeReferencia laInformacionDelCodigo)
+        private string ObtenerDiaDeFechaCompleta(InformacionDelCodigoDeReferencia laInformacion)
         {
-            return new Dia(laInformacionDelCodigo).ComoTexto();
+            return new Dia(laInformacion).ComoTexto();
         }
 
-        private string ObtenerMesDeFechaCompleta(InformacionDelCodigoDeReferencia laInformacionDelCodigo)
+        private string ObtenerMesDeFechaCompleta(InformacionDelCodigoDeReferencia laInformacion)
         {
-            return new Mes(laInformacionDelCodigo).ComoTexto();
+            return new Mes(laInformacion).ComoTexto();
         }
 
-        private string ObtenerAñoDeFechaCompleta(InformacionDelCodigoDeReferencia laInformacionDelCodigo)
+        private string ObtenerAñoDeFechaCompleta(InformacionDelCodigoDeReferencia laInformacion)
         {
-            return new Año(laInformacionDelCodigo).ComoTexto();
+            return new Año(laInformacion).ComoTexto();
         }
 
         public string ComoTexto()

@@ -1,22 +1,21 @@
-﻿using Ccharpentierl905.Negocio.ConParameterObject.Calculos;
-using System;
+﻿using ConParameterObject.Calculos;
 
-namespace ConParameterObject
+namespace CodigosDeReferencia.ConParameterObject
 {
     public class CodigoDeReferenciaCompleto
     {
         string codigoDeReferenciaSinVerificador;
         int verificador;
 
-        public CodigoDeReferenciaCompleto(InformacionDelCodigoDeReferencia laInformacionDelCodigo)
+        public CodigoDeReferenciaCompleto(InformacionDelCodigoDeReferencia laInformacion)
         {
-            codigoDeReferenciaSinVerificador = ObtenerCodigoDeReferenciaSinVerificador(laInformacionDelCodigo);
+            codigoDeReferenciaSinVerificador = ObtenerCodigoDeReferenciaSinVerificador(laInformacion);
             verificador = ObtenerElDigitoVerificador(codigoDeReferenciaSinVerificador);
         }
 
-        private string ObtenerCodigoDeReferenciaSinVerificador(InformacionDelCodigoDeReferencia laInformacionDelCodigo)
+        private string ObtenerCodigoDeReferenciaSinVerificador(InformacionDelCodigoDeReferencia laInformacion)
         {
-            return new CodigoDeReferenciaSinVerificador(laInformacionDelCodigo).ComoTexto();
+            return new CodigoDeReferenciaSinVerificador(laInformacion).ComoTexto();
         }
 
         private int ObtenerElDigitoVerificador(string codigoDeReferenciaSinVerificador)

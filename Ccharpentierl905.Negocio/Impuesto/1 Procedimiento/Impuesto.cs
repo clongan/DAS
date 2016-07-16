@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ComoUnProcedimiento
+namespace Impuestos.ComoUnProcedimiento
 {
     public class Impuesto
     {

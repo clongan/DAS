@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ConFunciones
+namespace RendimientosPorDescuento.ConFunciones
 {
     public class RendimientoPorDescuento
     {

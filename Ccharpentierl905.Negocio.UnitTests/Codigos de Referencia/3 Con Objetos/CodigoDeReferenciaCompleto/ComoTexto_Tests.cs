@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ConObjetos;
+using CodigosDeReferencia.ConObjetos;
 
 namespace ConObjetos_Tests
 {

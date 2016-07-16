@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ConParameterObject
+namespace CodigosDeReferencia.ConParameterObject
 {
     public class InformacionDelCodigoDeReferencia
     {

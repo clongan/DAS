@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ComoUnProcedimiento;
+using ValidacionDeDatos.ComoUnProcedimiento;
 
 namespace ComoUnProcedimiento_Tests
 {
@@ -26,7 +26,7 @@ namespace ComoUnProcedimiento_Tests
             fechaDeVencimiento = new DateTime(2016, 3, 3);
             fechaActual = new DateTime(2016, 3, 3);
 
-            elResultadoObtenido = ValidacionDeDatos.ValidarDatos(valorFacial, valorTransadoNeto, tasaDeImpuesto,
+            elResultadoObtenido = ValidacionDeDato.ValidarDatos(valorFacial, valorTransadoNeto, tasaDeImpuesto,
                 fechaDeVencimiento, fechaActual);
 
             Assert.AreEqual(elResultadoEsperado, elResultadoObtenido);
@@ -43,7 +43,7 @@ namespace ComoUnProcedimiento_Tests
             fechaDeVencimiento = new DateTime(2016, 10, 10);
             fechaActual = new DateTime(2016, 3, 3);
 
-            elResultadoObtenido = ValidacionDeDatos.ValidarDatos(valorFacial, valorTransadoNeto, tasaDeImpuesto,
+            elResultadoObtenido = ValidacionDeDato.ValidarDatos(valorFacial, valorTransadoNeto, tasaDeImpuesto,
                 fechaDeVencimiento, fechaActual);
 
             Assert.AreEqual(elResultadoEsperado, elResultadoObtenido);
@@ -60,7 +60,7 @@ namespace ComoUnProcedimiento_Tests
             fechaDeVencimiento = new DateTime(2016, 10, 10);
             fechaActual = new DateTime(2016, 3, 3);
 
-            elResultadoObtenido = ValidacionDeDatos.ValidarDatos(valorFacial, valorTransadoNeto, tasaDeImpuesto,
+            elResultadoObtenido = ValidacionDeDato.ValidarDatos(valorFacial, valorTransadoNeto, tasaDeImpuesto,
                 fechaDeVencimiento, fechaActual);
 
             Assert.AreEqual(elResultadoEsperado, elResultadoObtenido);
@@ -77,7 +77,7 @@ namespace ComoUnProcedimiento_Tests
             fechaDeVencimiento = new DateTime(2016, 10, 10);
             fechaActual = new DateTime(2016, 3, 3);
 
-            elResultadoObtenido = ValidacionDeDatos.ValidarDatos(valorFacial, valorTransadoNeto, tasaDeImpuesto,
+            elResultadoObtenido = ValidacionDeDato.ValidarDatos(valorFacial, valorTransadoNeto, tasaDeImpuesto,
                 fechaDeVencimiento, fechaActual);
 
             Assert.AreEqual(elResultadoEsperado, elResultadoObtenido);
@@ -94,7 +94,7 @@ namespace ComoUnProcedimiento_Tests
             fechaDeVencimiento = new DateTime(2016, 3, 3);
             fechaActual = new DateTime(2016, 3, 3);
 
-            elResultadoObtenido = ValidacionDeDatos.ValidarDatos(valorFacial, valorTransadoNeto, tasaDeImpuesto,
+            elResultadoObtenido = ValidacionDeDato.ValidarDatos(valorFacial, valorTransadoNeto, tasaDeImpuesto,
                 fechaDeVencimiento, fechaActual);
 
             Assert.AreEqual(elResultadoEsperado, elResultadoObtenido);
@@ -111,7 +111,7 @@ namespace ComoUnProcedimiento_Tests
             fechaDeVencimiento = new DateTime(2016, 10, 10);
             fechaActual = new DateTime(2016, 3, 3);
 
-            elResultadoObtenido = ValidacionDeDatos.ValidarDatos(valorFacial, valorTransadoNeto, tasaDeImpuesto,
+            elResultadoObtenido = ValidacionDeDato.ValidarDatos(valorFacial, valorTransadoNeto, tasaDeImpuesto,
                 fechaDeVencimiento, fechaActual);
 
             Assert.AreEqual(elResultadoEsperado, elResultadoObtenido);

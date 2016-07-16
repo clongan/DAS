@@ -1,7 +1,7 @@
-﻿using Ccharpentierl905.Negocio.ConObjetos.Calculos;
+﻿using ConObjetos.Calculos;
 using System;
 
-namespace ConObjetos
+namespace CodigosDeReferencia.ConObjetos
 {
     public class CodigoDeReferenciaCompleto
     {

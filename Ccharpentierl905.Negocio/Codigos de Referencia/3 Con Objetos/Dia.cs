@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ConObjetos
+namespace CodigosDeReferencia.ConObjetos
 {
     public class Dia
     {
@@ -22,8 +18,7 @@ namespace ConObjetos
 
         public string ComoTexto()
         {
-            return dia.ToString().PadLeft(2, '0');
+            return new DiaComoTexto(dia).ComoTexto();
         }
-
     }
 }

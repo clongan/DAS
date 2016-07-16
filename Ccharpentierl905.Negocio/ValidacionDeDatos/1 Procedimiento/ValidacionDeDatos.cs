@@ -1,20 +1,28 @@
 ﻿using System;
 
-namespace ComoUnProcedimiento
+namespace ValidacionDeDatos.ComoUnProcedimiento
 {
-    public class ValidacionDeDatos
+    public class ValidacionDeDato
     {
         public static bool ValidarDatos(double valorFacial, double valorTransadoNeto, double tasaDeImpuesto,
             DateTime fechaDeVencimiento, DateTime fechaActual)
         {
-            //sacar operaciones a valores aparte para que se lea "If elValorFacialEsValidado y ElValorTransado...etc
-            if ((valorFacial > 100000) &&
-                (valorTransadoNeto > 100000) &&
-                (tasaDeImpuesto > 0) && (tasaDeImpuesto < 1) &&
-                fechaActual < fechaDeVencimiento)
-                return true;
+
+            bool elValorFacialEsValido = (valorFacial > 100000);
+            bool elValorTransadoNetoEsValido = (valorTransadoNeto > 100000);
+            bool laTasaDeImpuestoEsMayorACero = (tasaDeImpuesto > 0);
+            bool laTasaDeImpuestoEsMenorAUno = (tasaDeImpuesto < 1);
+            bool laFechaActualEsMenorAFechaDeVencimiento = (fechaActual < fechaDeVencimiento);
+
+            bool esValido;
+
+            if (elValorFacialEsValido && elValorTransadoNetoEsValido && laTasaDeImpuestoEsMayorACero &&
+                laTasaDeImpuestoEsMenorAUno && laFechaActualEsMenorAFechaDeVencimiento)
+                esValido = true;
             else
-                return false;
+                esValido = false;
+
+            return esValido;
         }
     }
 }

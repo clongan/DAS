@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ConFunciones;
+using Impuestos.ConObjetos;
 using System;
 
 namespace ConObjetos_TESTS

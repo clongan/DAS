@@ -1,4 +1,4 @@
-﻿namespace Ccharpentierl905.Negocio.ComoUnProcedimiento.Calculos
+﻿namespace ComoUnProcedimiento.Calculos
 {
     public static class CalculoDeDigitoVerificador
     {

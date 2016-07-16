@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ComoUnProcedimiento;
+using Impuestos.ComoUnProcedimiento;
 using System;
 
 namespace ComoUnProcedimiento_TESTS

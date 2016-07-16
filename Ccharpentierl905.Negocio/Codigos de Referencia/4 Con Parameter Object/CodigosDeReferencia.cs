@@ -1,12 +1,10 @@
-﻿using System;
-
-namespace ConParameterObject
+﻿namespace CodigosDeReferencia.ConParameterObject
 {
-    public class CodigosDeReferencia
+    public class CalculosDeCodigosDeReferencia
     {
-        public static string GenerarCodigoDeReferencia(InformacionDelCodigoDeReferencia informacionDelCodigoDeReferencia)
+        public static string GenerarCodigoDeReferencia(InformacionDelCodigoDeReferencia laInformacion)
         {
-            return new CodigoDeReferenciaCompleto(informacionDelCodigoDeReferencia).ObtenerCodigoDeReferencia();
+            return new CodigoDeReferenciaCompleto(laInformacion).ObtenerCodigoDeReferencia();
         }
 
     }

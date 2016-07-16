@@ -1,6 +1,7 @@
 ﻿using System;
+using RendimientosPorDescuento.ConObjetos;
 
-namespace ConObjetos
+namespace Impuestos.ConObjetos
 {
     public class ImpuestoConTratamientoFiscal
     {
