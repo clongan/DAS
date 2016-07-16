@@ -82,6 +82,7 @@
     <Compile Include="Rendimiento Por Descuento\3 Con Objetos\TasaBruta\ObtenerTasaBruta_Tests.cs" />
     <Compile Include="Rendimiento Por Descuento\3 Con Objetos\ValorTransadoBruto\ObtenerValorTransadoBruto_Tests.cs" />
     <Compile Include="Rendimiento Por Descuento\3 Con Objetos\DiasAlVencimiento\DiasTotales_Tests.cs" />
+    <Compile Include="ValidacionDeDatos\2 Con Funciones\ValidacionDeDatos_Tests.cs" />
     <Compile Include="ValidacionDeDatos\1 Procedimiento\ValidacionDeDatos_Tests.cs" />
   </ItemGroup>
   <ItemGroup />

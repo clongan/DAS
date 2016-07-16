@@ -79,6 +79,9 @@
     <Compile Include="Rendimiento Por Descuento\3 Con Objetos\RendimientoPorDescuentoRedondeado.cs" />
     <Compile Include="Rendimiento Por Descuento\3 Con Objetos\TasaBruta.cs" />
     <Compile Include="Rendimiento Por Descuento\3 Con Objetos\ValorTransadoBruto.cs" />
+    <Compile Include="ValidacionDeDatos\3 Con Objetos\DeterminarValidezDeDatos.cs" />
+    <Compile Include="ValidacionDeDatos\3 Con Objetos\ValidacionDeDatos.cs" />
+    <Compile Include="ValidacionDeDatos\2 Con Funciones\ValidacionDeDatos.cs" />
     <Compile Include="ValidacionDeDatos\1 Procedimiento\ValidacionDeDatos.cs" />
   </ItemGroup>
   <ItemGroup />
