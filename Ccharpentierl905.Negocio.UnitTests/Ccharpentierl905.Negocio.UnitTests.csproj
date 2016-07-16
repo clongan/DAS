@@ -67,6 +67,9 @@
     <Compile Include="Codigos de Referencia\3 Con Objetos\FechaComoTexto\ComoTexto_Tests.cs" />
     <Compile Include="Codigos de Referencia\3 Con Objetos\Mes\ComoTexto_Tests.cs" />
     <Compile Include="Impuesto\1 Procedimiento\Impuesto_Tests.cs" />
+    <Compile Include="Impuesto\4 Con Parameter Object\ImpuestoConTratamientoFiscal_Tests\ImpuestoConTratamientoFiscal_Tests.cs" />
+    <Compile Include="Impuesto\4 Con Parameter Object\ImpuestoRedondeado\ImpuestoRedondeado_Tests.cs" />
+    <Compile Include="Impuesto\4 Con Parameter Object\Impuesto\Impuesto_Tests.cs" />
     <Compile Include="Impuesto\3 Con Objetos\ImpuestoConTratamientoFiscal_Tests\ImpuestoConTratamientoFiscal_Tests.cs" />
     <Compile Include="Impuesto\3 Con Objetos\ImpuestoRedondeado\ImpuestoRedondeado_Tests.cs" />
     <Compile Include="Impuesto\3 Con Objetos\Impuesto\Impuesto_Tests.cs" />
@@ -76,6 +79,12 @@
     <Compile Include="Codigos de Referencia\2 Con Funciones\CodigosDeReferencia_Tests.cs" />
     <Compile Include="Codigos de Referencia\1 Procedimiento\CodigosDeReferencia_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rendimiento Por Descuento\4 Con Parameter Object\DiasAlVencimiento\DiasTotales_Tests.cs" />
+    <Compile Include="Rendimiento Por Descuento\4 Con Parameter Object\RendimientoPorDescuentoConTratamientoFiscal_Tests\RendimientoPorDescuentoConTratamientoFiscal_Tests.cs" />
+    <Compile Include="Rendimiento Por Descuento\4 Con Parameter Object\RendimientoPorDescuentoRedondeado\RendimientoPorDescuentoRedondeado_Tests.cs" />
+    <Compile Include="Rendimiento Por Descuento\4 Con Parameter Object\RendimientoPorDescuento\RendimientoPorDescuento_Tests.cs" />
+    <Compile Include="Rendimiento Por Descuento\4 Con Parameter Object\TasaBruta\ObtenerTasaBruta_Tests.cs" />
+    <Compile Include="Rendimiento Por Descuento\4 Con Parameter Object\ValorTransadoBruto\ObtenerValorTransadoBruto_Tests.cs" />
     <Compile Include="Rendimiento Por Descuento\3 Con Objetos\RendimientoPorDescuentoConTratamientoFiscal_Tests\RendimientoPorDescuentoConTratamientoFiscal_Tests.cs" />
     <Compile Include="Rendimiento Por Descuento\3 Con Objetos\RendimientoPorDescuentoRedondeado\RendimientoPorDescuentoRedondeado_Tests.cs" />
     <Compile Include="Rendimiento Por Descuento\3 Con Objetos\RendimientoPorDescuento\RendimientoPorDescuento_Tests.cs" />
