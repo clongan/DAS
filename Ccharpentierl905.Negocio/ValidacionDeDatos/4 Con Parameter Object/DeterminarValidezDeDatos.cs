@@ -12,11 +12,11 @@ namespace ValidacionDeDatos.ConParameterObject
 
         public DeterminarValidezDeDatos(LaInformacionDeValidacion laInformacion)
         {
-            elValorFacialEsValido = DeterminarElValorFacial(laInformacion.valorFacial);
-            elValorTransadoNetoEsValido = DeterminarElValorTransadoNeto(laInformacion.valorTransadoNeto);
-            laTasaDeImpuestoEsMayorACero = DeterminarLaTasaDeImpuestoMayorACero(laInformacion.tasaDeImpuesto);
-            laTasaDeImpuestoEsMenorAUno = DeterminarLaTasaDeImpuestoMenorAUno(laInformacion.tasaDeImpuesto);
-            laFechaActualEsMenorAFechaDeVencimiento = DeterminarSiLaFechaActualEsMenorAFechaDeVencimiento(laInformacion.fechaDeVencimiento, laInformacion.fechaActual);
+            elValorFacialEsValido = DeterminarElValorFacial(laInformacion);
+            elValorTransadoNetoEsValido = DeterminarElValorTransadoNeto(laInformacion);
+            laTasaDeImpuestoEsMayorACero = DeterminarLaTasaDeImpuestoMayorACero(laInformacion);
+            laTasaDeImpuestoEsMenorAUno = DeterminarLaTasaDeImpuestoMenorAUno(laInformacion);
+            laFechaActualEsMenorAFechaDeVencimiento = DeterminarSiLaFechaActualEsMenorAFechaDeVencimiento(laInformacion);
         }
 
         public bool DeterminarSiEsValido()
@@ -28,29 +28,29 @@ namespace ValidacionDeDatos.ConParameterObject
                 return false;
         }
 
-        private bool DeterminarSiLaFechaActualEsMenorAFechaDeVencimiento(DateTime fechaDeVencimiento, DateTime fechaActual)
+        private bool DeterminarSiLaFechaActualEsMenorAFechaDeVencimiento(LaInformacionDeValidacion laInformacion)
         {
-            return (fechaActual < fechaDeVencimiento);
+            return (laInformacion.fechaActual < laInformacion.fechaDeVencimiento);
         }
 
-        private bool DeterminarLaTasaDeImpuestoMenorAUno(double tasaDeImpuesto)
+        private bool DeterminarLaTasaDeImpuestoMenorAUno(LaInformacionDeValidacion laInformacion)
         {
-            return (tasaDeImpuesto < 1);
+            return (laInformacion.tasaDeImpuesto < 1);
         }
 
-        private bool DeterminarLaTasaDeImpuestoMayorACero(double tasaDeImpuesto)
+        private bool DeterminarLaTasaDeImpuestoMayorACero(LaInformacionDeValidacion laInformacion)
         {
-            return (tasaDeImpuesto > 0);
+            return (laInformacion.tasaDeImpuesto > 0);
         }
 
-        private bool DeterminarElValorTransadoNeto(double valorTransadoNeto)
+        private bool DeterminarElValorTransadoNeto(LaInformacionDeValidacion laInformacion)
         {
-            return (valorTransadoNeto > 100000);
+            return (laInformacion.valorTransadoNeto > 100000);
         }
 
-        private bool DeterminarElValorFacial(double valorFacial)
+        private bool DeterminarElValorFacial(LaInformacionDeValidacion laInformacion)
         {
-            return (valorFacial > 100000);
+            return (laInformacion.valorFacial > 100000);
         }
     }
 }

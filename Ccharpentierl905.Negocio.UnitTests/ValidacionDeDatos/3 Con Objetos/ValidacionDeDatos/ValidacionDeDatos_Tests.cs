@@ -1,11 +1,11 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ValidacionDeDatos.ConFunciones;
+using ValidacionDeDatos.ConObjetos;
 
-namespace ConFunciones_Tests
+namespace ConObjetos_Tests
 {
     [TestClass]
-    public class ConFunciones_ValidacionDeDatos_Tests
+    public class ConObjetos_ValidacionDeDatos_Tests
     {
         private bool elResultadoEsperado;
         private bool elResultadoObtenido;
